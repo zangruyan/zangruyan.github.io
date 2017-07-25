@@ -1841,7 +1841,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #62dab4;
+  background: #654ea1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3105,4 +3105,7 @@ a {
 }
 .my_post_copyright {
   width: 95%;
+}
+.links-of-blogroll a {
+  border-bottom: #555 1px solid;
 }
