@@ -62,6 +62,10 @@
 
 
 
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
 
 
 
@@ -115,17 +119,17 @@
 
 
 
-<meta name="description" content="优秀的人，不是不合群，而是他们合群的人里面没有你  javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器)  javascript(JS)在页面中处理了什么事情？ 特效交互 数据交互 逻辑操作  常见特效的原理 通过js修改元素的css样式，来操作元素的变化。  js可以写在那里？注">
+<meta name="description" content="优秀的人，不是不合群，而是他们合群的人里面没有你  javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript（简单讲解一）">
 <meta property="og:url" content="http://yoursite.com/2017/07/24/github-pages-Hexo/index.html">
 <meta property="og:site_name" content="zangruyan">
-<meta property="og:description" content="优秀的人，不是不合群，而是他们合群的人里面没有你  javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器)  javascript(JS)在页面中处理了什么事情？ 特效交互 数据交互 逻辑操作  常见特效的原理 通过js修改元素的css样式，来操作元素的变化。  js可以写在那里？注">
+<meta property="og:description" content="优秀的人，不是不合群，而是他们合群的人里面没有你  javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-25T02:05:40.000Z">
+<meta property="og:updated_time" content="2017-07-25T03:54:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript（简单讲解一）">
-<meta name="twitter:description" content="优秀的人，不是不合群，而是他们合群的人里面没有你  javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器)  javascript(JS)在页面中处理了什么事情？ 特效交互 数据交互 逻辑操作  常见特效的原理 通过js修改元素的css样式，来操作元素的变化。  js可以写在那里？注">
+<meta name="twitter:description" content="优秀的人，不是不合群，而是他们合群的人里面没有你  javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器)">
 
 
 
@@ -135,7 +139,7 @@
     root: '/',
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
+    fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -389,9 +393,8 @@
 <h2 id="javascript-JS-的组成？"><a href="#javascript-JS-的组成？" class="headerlink" title="javascript(JS)的组成？"></a>javascript(JS)的组成？</h2><ul>
 <li>DOM 文档对象模型</li>
 <li>BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好]</li>
-<li>ECMAScript 核心(翻译器)</li>
-</ul>
-<h2 id="javascript-JS-在页面中处理了什么事情？"><a href="#javascript-JS-在页面中处理了什么事情？" class="headerlink" title="javascript(JS)在页面中处理了什么事情？"></a>javascript(JS)在页面中处理了什么事情？</h2><ul>
+<li>ECMAScript 核心(翻译器)<a id="more"></a> 
+<h2 id="javascript-JS-在页面中处理了什么事情？"><a href="#javascript-JS-在页面中处理了什么事情？" class="headerlink" title="javascript(JS)在页面中处理了什么事情？"></a>javascript(JS)在页面中处理了什么事情？</h2></li>
 <li>特效交互</li>
 <li>数据交互</li>
 <li>逻辑操作</li>
@@ -592,7 +595,7 @@
   <p><span>本文标题:</span><a href="/2017/07/24/github-pages-Hexo/">Javascript（简单讲解一）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zangruyan 的个人博客">zangruyan</a></p>
   <p><span>发布时间:</span>2017年07月24日 - 23:07</p>
-  <p><span>最后更新:</span>2017年07月25日 - 10:07</p>
+  <p><span>最后更新:</span>2017年07月25日 - 11:07</p>
   <p><span>原始链接:</span><a href="/2017/07/24/github-pages-Hexo/" title="Javascript（简单讲解一）">http://yoursite.com/2017/07/24/github-pages-Hexo/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2017/07/24/github-pages-Hexo/"  aria-label="复制成功！"></i></span>
   </p>
@@ -885,6 +888,8 @@
 
 
 
+  
+
 
   
 
@@ -912,6 +917,9 @@
 
   
   <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
   
   <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
