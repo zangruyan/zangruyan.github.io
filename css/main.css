@@ -1841,7 +1841,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ebffeb;
+  background: #44ff6a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3109,9 +3109,6 @@ a {
 .links-of-blogroll a {
   border-bottom: #555 1px solid;
 }
-* {
-  cursor: url("http://om8u46rmb.bkt.clouddn.com/sword2.ico"), auto !important;
-}
 hr {
   margin: 40px 0;
   height: 3px;
@@ -3121,10 +3118,4 @@ hr {
 }
 .posts-expand {
   padding: 0;
-}
-a {
-  color: #555;
-  text-decoration: none;
-  border-bottom: 1px solid #999;
-  word-wrap: break-word;
 }
