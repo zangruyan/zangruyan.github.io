@@ -1841,7 +1841,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d2e53c;
+  background: #14ff0a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3083,4 +3083,12 @@ a {
   width: 180px;
   height: 180px;
   margin-left: 20px;
+}
+.post-button .btn {
+  color: #555;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 2px;
+  line-height: 2;
+  margin: 0 4px 8px 4px;
 }
