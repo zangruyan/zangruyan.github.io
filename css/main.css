@@ -1841,7 +1841,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffffd2;
+  background: #223808;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3082,4 +3082,5 @@ a {
 #QR img {
   width: 180px;
   height: 180px;
+  margin-left: 20px;
 }
