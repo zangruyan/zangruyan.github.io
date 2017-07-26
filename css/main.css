@@ -1956,7 +1956,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff6520;
+  background: #ad0ffa;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3166,40 +3166,6 @@ a {
 .post-button a:hover {
   color: #7784ba;
 }
-#rewardButton {
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-  border-radius: 100%;
-  padding: 0;
-  margin: 0;
-  letter-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-}
-#rewardButton span {
-  display: inline-block;
-  width: 80px;
-  height: 35px;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: 400;
-  font-style: normal;
-  font-variant: normal;
-  font-stretch: normal;
-  font-size: 18px;
-  font-family: "Microsoft Yahei";
-  background: #f44336;
-}
-#QR {
-  padding-top: 20px;
-}
-#QR img {
-  width: 180px;
-  height: 180px;
-  margin-left: 20px;
-}
 .post-button .btn {
   color: #555;
   font-size: 14px;
@@ -3233,4 +3199,14 @@ hr {
 }
 .posts-expand {
   padding: 0;
+}
+.tag-cloud {
+  text-align: left;
+}
+.tag-cloud a {
+  background: #eee;
+  padding: 0 8px;
+}
+.tag-cloud a:hover {
+  background: #ddd;
 }
