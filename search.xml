@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F07%2F25%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[ES6 - 函数扩展]]></title>
+    <url>%2F2017%2F07%2F27%2Fes6-function-extension%2F</url>
+    <content type="text"><![CDATA[函数参数的默认值 函数参数的默认值：为函数形参设置默认值 语法：123//有默认值的参数写在后面function fn(a,b=1)&#123;&#125;function fn(&#123;a,b=1&#125;)&#123;&#125; 注意：定义默认值的参数必须是尾参数，因为定义默认值之后该参数可忽略。123456789101112131415function fn(a,b)&#123; return &#123;a,b&#125;;&#125;console.log(fn(1,2));//a =1;b=2;console.log(fn(1));//a=1;b=2;/* 初始化赋值function ajax(options)&#123; var opt = &#123; type:options.type || &apos;get&apos;; &#125;&#125;ajax(&#123;&#125;);*/ 剩余参数 rest参数：用于获取函数的多余参数 我们通常会一个函数定义一些参数，有些参数是确定的，而有些参数是不确定（个数）的 es6之前如果要获取布丁参数，一般用anguments不定参来处理 这里用剩余参数来处理 语法：function fn(a,b=1,….变量名){} 注意：rest 后边不能再有其他参数，否则会报错。1234function fn(a,b,c,....tutu)&#123; console.log(tutu);//用于获取函数的多余参数 tutu是个数组&#125;fn(1,2,3,4,5,6,7) 扩展运算符（spread） 扩展运算符（spread）是三个点（…）。它好比rest参数的逆运算，将一个数组转为用逗号分隔的参数序列。该运算符主要用于函数调用。1234567var arr = [1,2,3,4,5,6,7];console.log(Math.max(...arr));//7 返回最大值var arr1 = [1,3,4];var arr2 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];//var arr3 = arr1.concat(arr2);var arr3 = [...arr1,...arr2] // 1,3,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;; 箭头函数：【属于表达式函数】 用来作为回调函数使用。 写法123456789101112131415161718192021//当参数只有一个的时候 小括号可以省略var f = a=&gt;a+1;//当参数有多个的时候,要加小括号var f = (a,b) =&gt;a+b;//当没有参数时候,也要加小括号var f = () =&gt;a+b;//只有一条语句的时候，可以省略&#123;&#125;，同时该条语句的返回值var fn7 = r =&gt;r * r * Math.PI;//但是如果有多条语句或者返回值是一个对象，则必须使用&#123;&#125;var fn8 = () =&gt;&#123; var result = r * r * Math.PI; console.log(result);&#125;var fn9 = () =&gt;&#123; return &#123; x:10 &#125;&#125; 注意 1、箭头函数的this永远指向 声明时候 作用域的对象 普通函数this指向取决于调用 箭头函数this指向取决于声明 2、不可以当作构造函数，不可以使用new命令，否则会抛出一个错误。 3、该函数体内不存在arguments。]]></content>
       <categories>
         <category>web前端</category>
+        <category>ES6</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>php</tag>
+        <tag>箭头函数</tag>
+        <tag>剩余参数</tag>
       </tags>
   </entry>
   <entry>

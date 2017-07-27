@@ -103,7 +103,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="web前端, javascript, html, css" />
+  <meta name="keywords" content="箭头函数,剩余参数," />
 
 
 
@@ -119,16 +119,18 @@
 
 
 
-<meta name="description" content="坚强的小逗比～">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zangruyan">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="函数参数的默认值 函数参数的默认值：为函数形参设置默认值 语法：123//有默认值的参数写在后面function fn(a,b=1)&amp;#123;&amp;#125;function fn(&amp;#123;a,b=1&amp;#125;)&amp;#123;&amp;#125;">
+<meta name="keywords" content="箭头函数,剩余参数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 - 函数扩展">
+<meta property="og:url" content="http://yoursite.com/2017/07/27/es6-function-extension/index.html">
 <meta property="og:site_name" content="zangruyan">
-<meta property="og:description" content="坚强的小逗比～">
+<meta property="og:description" content="函数参数的默认值 函数参数的默认值：为函数形参设置默认值 语法：123//有默认值的参数写在后面function fn(a,b=1)&amp;#123;&amp;#125;function fn(&amp;#123;a,b=1&amp;#125;)&amp;#123;&amp;#125;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-27T07:27:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zangruyan">
-<meta name="twitter:description" content="坚强的小逗比～">
+<meta name="twitter:title" content="ES6 - 函数扩展">
+<meta name="twitter:description" content="函数参数的默认值 函数参数的默认值：为函数形参设置默认值 语法：123//有默认值的参数写在后面function fn(a,b=1)&amp;#123;&amp;#125;function fn(&amp;#123;a,b=1&amp;#125;)&amp;#123;&amp;#125;">
 
 
 
@@ -156,13 +158,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/27/es6-function-extension/"/>
 
 
 
 
 
-  <title>归档 | zangruyan</title>
+  <title>ES6 - 函数扩展 | zangruyan</title>
   
 
 
@@ -187,7 +189,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -325,103 +327,308 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 2 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/27/es6-function-extension/" itemprop="url">
-              
-                <span itemprop="name">ES6 - 函数扩展</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-27T15:27:12+08:00"
-              content="2017-07-27" >
-          07-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/24/github-pages-Hexo/" itemprop="url">
-              
-                <span itemprop="name">Javascript（简单讲解一）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-24T23:28:36+08:00"
-              content="2017-07-24" >
-          07-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/27/es6-function-extension/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zangruyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zangruyan">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ES6 - 函数扩展</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-27T15:27:12+08:00">
+                2017-07-27
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-27T15:27:12+08:00">
+                2017-07-27
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/27/es6-function-extension/" class="leancloud_visitors" data-flag-title="ES6 - 函数扩展">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度 </span>
+               
+                 <span class="leancloud-visitors-count"></span>℃
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="函数参数的默认值"><a href="#函数参数的默认值" class="headerlink" title="函数参数的默认值"></a>函数参数的默认值</h2><ul>
+<li>函数参数的默认值：为函数形参设置默认值</li>
+<li>语法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//有默认值的参数写在后面</div><div class="line">function fn(a,b=1)&#123;&#125;</div><div class="line">function fn(&#123;a,b=1&#125;)&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>注意：定义默认值的参数必须是尾参数，因为定义默认值之后该参数可忽略。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function fn(a,b)&#123;</div><div class="line">	return &#123;a,b&#125;;</div><div class="line">&#125;</div><div class="line">console.log(fn(1,2));//a =1;b=2;</div><div class="line">console.log(fn(1));//a=1;b=2;</div><div class="line">/* 初始化赋值</div><div class="line">function ajax(options)&#123;</div><div class="line">	var opt = &#123;</div><div class="line">		type:options.type || &apos;get&apos;;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">ajax(&#123;</div><div class="line"></div><div class="line">&#125;);</div><div class="line">*/</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="剩余参数"><a href="#剩余参数" class="headerlink" title="剩余参数"></a>剩余参数</h2><ul>
+<li>rest参数：用于获取函数的多余参数<ul>
+<li>我们通常会一个函数定义一些参数，有些参数是确定的，而有些参数是不确定（个数）的</li>
+<li>es6之前如果要获取布丁参数，一般用anguments不定参来处理</li>
+<li>这里用剩余参数来处理</li>
+</ul>
+</li>
+<li>语法：function fn(a,b=1,….变量名){}</li>
+<li>注意：rest 后边不能再有其他参数，否则会报错。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function fn(a,b,c,....tutu)&#123;</div><div class="line">	console.log(tutu);//用于获取函数的多余参数  tutu是个数组</div><div class="line">&#125;</div><div class="line">fn(1,2,3,4,5,6,7)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="扩展运算符（spread）"><a href="#扩展运算符（spread）" class="headerlink" title="扩展运算符（spread）"></a>扩展运算符（spread）</h2><ul>
+<li>扩展运算符（spread）是三个点（…）。它好比rest参数的逆运算，将一个数组转为用逗号分隔的参数序列。该运算符主要用于函数调用。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4,5,6,7];</div><div class="line">console.log(Math.max(...arr));//7 返回最大值</div><div class="line"></div><div class="line">var arr1 = [1,3,4];</div><div class="line">var arr2 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</div><div class="line">//var arr3 = arr1.concat(arr2);</div><div class="line">var arr3 = [...arr1,...arr2] // 1,3,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="箭头函数：【属于表达式函数】"><a href="#箭头函数：【属于表达式函数】" class="headerlink" title="箭头函数：【属于表达式函数】"></a>箭头函数：【属于表达式函数】</h2><blockquote>
+<p>用来作为回调函数使用。</p>
+<ul>
+<li>写法<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//当参数只有一个的时候 小括号可以省略</div><div class="line">var f = a=&gt;a+1;</div><div class="line">//当参数有多个的时候,要加小括号</div><div class="line">var f = (a,b) =&gt;a+b;</div><div class="line">//当没有参数时候,也要加小括号</div><div class="line">var f = () =&gt;a+b;</div><div class="line"></div><div class="line">//只有一条语句的时候，可以省略&#123;&#125;，同时该条语句的返回值</div><div class="line">var fn7 = r =&gt;r * r * Math.PI;</div><div class="line"></div><div class="line">//但是如果有多条语句或者返回值是一个对象，则必须使用&#123;&#125;</div><div class="line">var fn8 = () =&gt;&#123;</div><div class="line">    var result = r * r * Math.PI;</div><div class="line">    console.log(result);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var fn9 = () =&gt;&#123;</div><div class="line">    return &#123;</div><div class="line">        x:10</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>注意<ul>
+<li>1、箭头函数的this永远指向 声明时候 作用域的对象<ul>
+<li>普通函数this指向取决于调用</li>
+<li>箭头函数this指向取决于声明</li>
+</ul>
+</li>
+<li>2、不可以当作构造函数，不可以使用new命令，否则会抛出一个错误。</li>
+<li>3、该函数体内不存在arguments。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+        
+          
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/07/27/es6-function-extension/">ES6 - 函数扩展</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 zangruyan 的个人博客">zangruyan</a></p>
+  <p><span>发布时间:</span>2017年07月27日 - 15:07</p>
+  <p><span>最后更新:</span>2017年07月27日 - 15:07</p>
+  <p><span>原始链接:</span><a href="/2017/07/27/es6-function-extension/" title="ES6 - 函数扩展">http://yoursite.com/2017/07/27/es6-function-extension/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2017/07/27/es6-function-extension/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i>转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+        
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>打赏我的人，运气都不会太差！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://i1.ciimg.com/602135/6284ce8d85acea56.jpg" alt="zangruyan WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://i1.ciimg.com/602135/6206cd5105c75c5c.jpg" alt="zangruyan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/箭头函数/" rel="tag"><i class="fa fa-tag"></i> 箭头函数</a>
+          
+            <a href="/tags/剩余参数/" rel="tag"><i class="fa fa-tag"></i> 剩余参数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/24/github-pages-Hexo/" rel="next" title="Javascript（简单讲解一）">
+                <i class="fa fa-chevron-left"></i> Javascript（简单讲解一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+       
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -429,6 +636,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTcyMi82Mjg5"></div>
+    
+  </div>
+
 
         </div>
         
@@ -449,8 +662,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -550,6 +772,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数参数的默认值"><span class="nav-number">1.</span> <span class="nav-text">函数参数的默认值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#剩余参数"><span class="nav-number">2.</span> <span class="nav-text">剩余参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展运算符（spread）"><span class="nav-number">3.</span> <span class="nav-text">扩展运算符（spread）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#箭头函数：【属于表达式函数】"><span class="nav-number">4.</span> <span class="nav-text">箭头函数：【属于表达式函数】</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -686,11 +924,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
@@ -720,6 +956,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
