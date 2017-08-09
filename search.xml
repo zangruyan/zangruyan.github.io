@@ -3,6 +3,41 @@
   
     
     <entry>
+      <title><![CDATA[mac 用 n 升级 node]]></title>
+      <url>/2017/08/09/mac-node-up/</url>
+      <content type="html"><![CDATA[<p>切记要按照步骤:</p>
+<ul>
+<li>第一步，先查看本机node.js版本：$ node -v<a id="more"></a></li>
+<li>第二步，清除node.js的cache：$ sudo npm cache clean -f</li>
+<li>第三步，安装 n 工具，这个工具是专门用来管理node.js版本的，别怀疑这个工具的名字，是他是他就是他，他的名字就是 “n”: $ sudo npm install -g n</li>
+<li>第四步，安装最新版本的node.js<ul>
+<li>$ sudo n stable:(安装最新稳定版本)</li>
+<li>$ sudo n latest:(安装最新版本)</li>
+</ul>
+</li>
+<li>第五步，再次查看本机的node.js版本：$ node -v</li>
+</ul>
+<p>【注意：第二步比较重要，有些可以省略有些就不行，所以还是使用的好。】</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 后端 </category>
+            
+            <category> node </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> node </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[node 初识]]></title>
       <url>/2017/08/09/20170809-node1/</url>
       <content type="html"><![CDATA[<h2 id="http—协议"><a href="#http—协议" class="headerlink" title="http—协议"></a>http—协议</h2><ul>
@@ -61,44 +96,9 @@
       
         <categories>
             
-            <category> web前端 </category>
+            <category> 后端 </category>
             
             <category> node </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> node </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[mac 用 n 升级 node]]></title>
-      <url>/2017/08/03/mac-node-up/</url>
-      <content type="html"><![CDATA[<p>切记要按照步骤:</p>
-<ul>
-<li>第一步，先查看本机node.js版本：$ node -v<a id="more"></a></li>
-<li>第二步，清除node.js的cache：$ sudo npm cache clean -f</li>
-<li>第三步，安装 n 工具，这个工具是专门用来管理node.js版本的，别怀疑这个工具的名字，是他是他就是他，他的名字就是 “n”: $ sudo npm install -g n</li>
-<li>第四步，安装最新版本的node.js<ul>
-<li>$ sudo n stable:(安装最新稳定版本)</li>
-<li>$ sudo n latest:(安装最新版本)</li>
-</ul>
-</li>
-<li>第五步，再次查看本机的node.js版本：$ node -v</li>
-</ul>
-<p>【注意：第二步比较重要，有些可以省略有些就不行，所以还是使用的好。】</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 前端 </category>
-            
-            <category> node.js </category>
             
         </categories>
         
