@@ -1,142 +1,759 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[mac 用 n 升级 node]]></title>
-    <url>%2F2017%2F08%2F03%2Fmac-node-up%2F</url>
-    <content type="text"><![CDATA[切记要按照步骤: 第一步，先查看本机node.js版本：$ node -v 第二步，清除node.js的cache：$ sudo npm cache clean -f 第三步，安装 n 工具，这个工具是专门用来管理node.js版本的，别怀疑这个工具的名字，是他是他就是他，他的名字就是 “n”: $ sudo npm install -g n 第四步，安装最新版本的node.js $ sudo n stable:(安装最新稳定版本) $ sudo n latest:(安装最新版本) 第五步，再次查看本机的node.js版本：$ node -v 【注意：第二步比较重要，有些可以省略有些就不行，所以还是使用的好。】]]></content>
-      <categories>
-        <category>前端</category>
-        <category>node.js</category>
-      </categories>
-      <tags>
-        <tag>node</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Node Package Manager[NPM]]]></title>
-    <url>%2F2017%2F08%2F03%2F20170803-npm%2F</url>
-    <content type="text"><![CDATA[NPM node包管理工具(器)，用来管理和维护项目中所用到的一些第三方的代码 官网：https://npmjs.org/package.json 当前项目／包的说明配置文件，以及其他一些关于当前项目的说明，该文件内必须最少包含下面两个字段 name：包的名称 version: 包的版本 dependencies:可选的 命令 npm 直接输入npm 命令，不带任何的参数和选项的话，那么就可以看到npm的使用说明 npm install &lt;包名&gt;／别名 npm i &lt;包名&gt; 在当前运行该命名的目录下安装指定的软件包，如果该目录下不存在node_modules目录，然后把包安装在当前目录的node_modules下 –save / -S:安装当前包的同时，添加该安装包的信息到当前项目的package.json的directories中 npm init 初始化一个项目，并且自动生成package.js npm uninstall &lt;包名&gt; / npm un &lt;包名&gt; 卸载指定的安装包，如果想同时从dependencies中删除依赖信息的话，可以加上 –save/-S npm update &lt;包名&gt;npm search &lt;包名&gt;本地安装／全局安装 本地安装：把包安装到当前项目目录下（node_nodules） 全局安装：把包安装到当前系统（电脑）的全剧目录下 区别：安装在本地的包，只能该项目以及该项目下的子目录文件才能访问，安装在全局的包，在整个系统下都可以使用]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>npm</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[nvm 重启终端失效的解决方法]]></title>
-    <url>%2F2017%2F08%2F01%2F20170801-nvm-restart-failure%2F</url>
-    <content type="text"><![CDATA[brew安装 我们需要按照上面提供的方法,首先在用户更目录下 创建 .nvm 文件,在终端中输入 mkdir ~/.nvm 然后去编辑你的 bash 配置文件 $HOME/.bashrc ,如果你使用 zsh 那么编辑 $HOME/.zshrc 配置文件,分别是 nano ~/.bashrc 与 nano ~/.zshrc 把下面的内容粘贴进去 通过 brew install nvm 来安装的nvm粘贴此段 export NVM_DIR=~/.nvm 与 source $(brew –prefix nvm)/nvm.sh 最后让你的 shell 配置及时生效,分别是 source ~/.bashrc 与 source ~/.zshrc curl安装 打开终端键入： 1curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.7/install.sh bash 配置环境变量(已有 .bash_profile) 12export NVM_DIR=&quot;$HOME/.nvm&quot;[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm 配置环境变量(无 .bash_profile) 添加 .bash_profile在终端键入 touch ~/.bash_profile 打开 .bash_profile在终端键入 open -e .bash_profile 在 .basn_profile中输入 export NVM_DIR=”$HOME/.nvm” 与 [ -s “$NVM_DIR/nvm.sh” ] &amp;&amp; . “$NVM_DIR/nvm.sh” # This loads nvm 两行代码 运行配置文件,在终端键入 1source ~/.bash_profile 查看配置路径,在终端键入 1$PATH]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>nvm</category>
-      </categories>
-      <tags>
-        <tag>nvm</tag>
-        <tag>node</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[nvm常用命令]]></title>
-    <url>%2F2017%2F08%2F01%2F20170801-nvm-node%2F</url>
-    <content type="text"><![CDATA[nvm常用命令： nvm install ## 安装指定版本，可模糊安装，如：安装v4.4.0，既可nvm install v4.4.0，又可nvm install 4.4 nvm uninstall ## 删除已安装的指定版本，语法与install类似 nvm use ## 切换使用指定的版本node nvm ls ## 列出所有安装的版本 nvm ls-remote ## 列出所以远程服务器的版本（官方node version list） nvm current ## 显示当前的版本 nvm alias ## 给不同的版本号添加别名 nvm unalias ## 删除已定义的别名 nvm reinstall-packages ## 在当前版本node环境下，重新全局安装指定版本号的npm包]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>nvm</category>
-      </categories>
-      <tags>
-        <tag>nvm</tag>
-        <tag>node</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ES6（字符串的扩展）]]></title>
-    <url>%2F2017%2F07%2F31%2Fes6-string-extension%2F</url>
-    <content type="text"><![CDATA[模版字符串 es6新增的用于表示字符串的语法格式 以``作为模板字符串的起始和结束符 是一个增强的字符串标识符 保持编辑格式 支持表达式 ${表达式} 我们可以把一个js的表达式放置在一个${}中，这里的表达式会被js所解析，注意：不支持语句，比如if，for，while等123456789var str = &apos;muban&apos;;var str1 = `muban`;var str2 = `$&#123;1+2&#125;&lt;ul&gt; &lt;li&gt;$&#123;&apos;muban&apos;.toUpperCase()&#125;&lt;/li&gt; &lt;li&gt;$&#123;str1&#125;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;&lt;/ul&gt;`console.log(str2);]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>ES6</category>
-      </categories>
-      <tags>
-        <tag>string</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ES6（函数扩展）]]></title>
-    <url>%2F2017%2F07%2F31%2Fes6-function-extension%2F</url>
-    <content type="text"><![CDATA[函数参数的默认值 函数参数的默认值：为函数形参设置默认值 语法：123//有默认值的参数写在后面function fn(a,b=1)&#123;&#125;function fn(&#123;a,b=1&#125;)&#123;&#125; 注意：定义默认值的参数必须是尾参数，因为定义默认值之后该参数可忽略。12345function fn(a,b)&#123; return &#123;a,b&#125;;&#125;console.log(fn(1,2));//a =1;b=2;console.log(fn(1));//a=1;b=undefined; 剩余参数 rest参数：用于获取函数的多余参数 我们通常会一个函数定义一些参数，有些参数是确定的，而有些参数是不确定（个数）的 es6之前如果要获取不定参数，一般用anguments不定参来处理 这里用剩余参数来处理 语法：function fn(a,b=1,….变量名){} 注意：rest 后边不能再有其他参数，否则会报错。1234function fn(a,b,c,....tutu)&#123; console.log(tutu);//用于获取函数的多余参数 tutu是个数组&#125;fn(1,2,3,4,5,6,7) 箭头函数：【属于表达式函数】 用来作为回调函数使用。 写法 123456789101112131415161718192021//当参数只有一个的时候 小括号可以省略var f = a=&gt;a+1;//当参数有多个的时候,要加小括号var f = (a,b) =&gt;a+b;//当没有参数时候,也要加小括号var f = () =&gt;a+b;//只有一条语句的时候，可以省略&#123;&#125;，同时该条语句的返回值var fn7 = r =&gt;r * r * Math.PI;//但是如果有多条语句或者返回值是一个对象，则必须使用&#123;&#125;var fn8 = () =&gt;&#123; var result = r * r * Math.PI; console.log(result);&#125;var fn9 = () =&gt;&#123; return &#123; x:10 &#125;&#125; 注意 1、箭头函数的this永远指向 声明时候 作用域的对象 普通函数this指向取决于调用 箭头函数this指向取决于声明 2、不可以当作构造函数，不可以使用new命令，否则会抛出一个错误。 3、该函数体内不存在arguments。]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>ES6</category>
-      </categories>
-      <tags>
-        <tag>函数</tag>
-        <tag>参数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ES6（数组扩展）]]></title>
-    <url>%2F2017%2F07%2F28%2Fes6-array-extension%2F</url>
-    <content type="text"><![CDATA[扩展运算符（spread） 扩展运算符（spread）是三个点（…）。它好比rest参数的逆运算，将一个数组转为用逗号分隔的参数序列。该运算符主要用于函数调用。 1234567var arr = [1,2,3,4,5,6,7];console.log(Math.max(...arr));//7 返回最大值var arr1 = [1,3,4];var arr2 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];//var arr3 = arr1.concat(arr2);var arr3 = [...arr1,...arr2] // 1,3,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;; 数组推导 ES6提供简洁写法，允许直接通过现有数组生成新数组，这被称为数组推导（array comprehension）。 eg:123var arr = [1,2,3,4,5];var arr2 = [for(value of arr) value*2];console.log(arr2);//2,4,6,8,10]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>ES6</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ES6（for of）]]></title>
-    <url>%2F2017%2F07%2F28%2Fes6-for-of%2F</url>
-    <content type="text"><![CDATA[ES6 借鉴 C++、Java、C# 和 Python 语言，引入了for…of循环，作为遍历所有数据结构的统一的方法。 一个数据结构只要部署了Symbol.iterator属性，就被视为具有iterator接口，就可以用for…of循环遍历它的成员。也就是说，for…of循环内部调用的是数据结构的Symbol.iterator方法。 for…of循环可以使用的范围包括数组、Set 和 Map 结构、某些类似数组的对象（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。 arr.keys():用于for of对数组键名的遍历 语法：for(let index of arr.keys()){} arr.values():用于for of 对数组键值的遍历 语法：for(let value of arr.values()){} arr.entries():用于for of 对数组键值对的遍历 语法：for(let[index,ele]of arr.entries()){} 回顾： for in 用来遍历对象的属性名。1234var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];for (var v in arr) &#123; console.log(v);&#125; 数组类似数组的对象，Set，Map 数组原生具备iterator接口（即默认部署了Symbol.iterator属性），for…of循环本质上就是调用这个接口产生的遍历器。1234var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];for (var v of arr) &#123; console.log(v); //a,b,c&#125; 普通对象 像var a = {‘a’,’b’}这种普通的对象，for…of结构不能直接使用，会报错，必须部署了 Iterator 接口后才能使用，那就要自己设置迭代器12345678910111213141516171819202122232425262728293031323334353637383940// 当我们通过forof去迭代obj的时候，js内部会去查找并调用obj的Symbol.iterator的方法//obj[Symbol.iterator]() =&gt; iterator.next() =&gt; 根据返回的对象中的done值，来决定是否已经完成或继续调用next，如果done为真，表示迭代结束通过忽略这次value值，如果为false，表示当前value有效，并继续下一次迭代（next()）for (var v of obj) &#123; console.log(v);&#125;for (var &#123;k,v&#125; of obj) &#123; console.log(k,v);&#125;例如：自己写迭代器//如果我们希望一个对象能够被迭代，那么就需要去实现该对象的迭代协议和迭代器// 迭代协议var obj = &#123;x:10,y:20,z:100&#125;obj[Symbol.iterator] = function() &#123; //let keys = [&apos;x&apos;, &apos;y&apos;]; let keys = Object.keys(obj); let n = -1; return &#123; next() &#123; if (n &lt; keys.length-1) &#123; //return &#123;done: false, value: obj[keys[n++]]&#125;; //return &#123;done: false, value: keys[n++]&#125;; n++; return &#123;done: false, value: &#123; k: keys[n], v: obj[keys[n]] &#125;&#125;; &#125; else &#123; return &#123;done: true&#125;; &#125; &#125; &#125;&#125;;var objIterator = obj[Symbol.iterator]();//console.log(objIterator);console.log(objIterator.next());console.log(objIterator.next());console.log(objIterator.next());]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>ES6</category>
-      </categories>
-      <tags>
-        <tag>for of</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ES6（变量、常量、解构赋值）]]></title>
-    <url>%2F2017%2F07%2F27%2Fes6-let-const-Destructuring-assignment%2F</url>
-    <content type="text"><![CDATA[变量：let：用来声明变量。【特性】： 不允许重复声明 没有预解析，必须在声明之后使用【我们把当前作用域最开始到let声明的变量之间的区域称为-暂存死区】 块级作用域 一对{}包括的区域称为代码块：块级作用域指一个变量或者函数只在该区域才起作用。 常量：什么是常量？在定义之后值是固定不变的，即为常量。 const作用用来声明常量，注意：重复声明会报错。 变量和常量的区别：变量在定值之后可以修改值，常量不可以，但是常量的对象的值是可以修改的。 常量不可以改，它的子数据可以修改 如果希望一个对象本身及其子数据都不能变化，那么通过const和freeze同时使用123456789eg： const a = &#123;x:0&#125;; a = 12; //错误 a.x = 10; // 可以修改成功 //如果不允许修改，那么就可以用冻结对象的方式 Object.freeze(obj); a.x = 120; console.log(a); // 改不了，因为已经冻结了 解构赋值： ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为结构。 数组的解构赋值 按照对应的顺序解构 123var arr = [1,2,3]var [a,b,c] = arr;console.log(a,b,c); //答案：1 2 3 123var arr = [1,[2,3]];var [a,b,c] = arr;console.log(a,b,c); //1 [2,3] undefind 对象的解构赋值： 根据名称来找的 1.声明{}中的变量 2.根据{}中的变量，去=后面的对象中提取对应的属性，并把该属性对应的值赋值给前面对应的变量，如果没有该属性，返回undefined 3.如果我们希望解构出来的属性名在使用的时候使用的是另一个名称，那么这个时候需要给需要使用的变量名设置一个别名12//取出left别名L，去除top别名Tlet &#123;left:L,top:T,a&#125;=getComputedStyle(document.body); 123456789var obj = &#123; foo:function()&#123; &#125;, o:&#123;&#125;, arr:[], str:&apos;abc&apos;&#125;var &#123;foo,arr,str&#125; = obj;console.log(foo,arr,str);//function()&#123;&#125; [] abc object 交换值：1234var x = 1;var y = 2;var [x,y] = [y,x];console.log(x,y);//2 1;]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>ES6</category>
-      </categories>
-      <tags>
-        <tag>let</tag>
-        <tag>const</tag>
-        <tag>解构赋值</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ES6（对象的扩展）]]></title>
-    <url>%2F2017%2F07%2F27%2Fes6-object-extension%2F</url>
-    <content type="text"><![CDATA[属性的简洁表示法: 当一个对象的key和对应的值（必须是一个变量名称）同名的话，那么可以简写成一个key 允许直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。例如：123456function f(x,y)&#123; x++; y++; return &#123;x,y&#125;&#125;console.log(f(1,2));//&#123;x:2,y:3&#125; 方法的简洁表示法：例如：1234567891011121314普通：let obj2 = &#123; a:a, fn:function()&#123; console.log(1); &#125;&#125;es6:let obj3 = &#123; a, fn()&#123; console.log(1); &#125;&#125; 属性名表达式123456var x = &apos;username&apos;;let obj4 = &#123; //x: &apos;motao&apos; //这里的x不会作为变量表达式进行解析 [x]: &apos;motao&apos; //如果把key放在一个[]中，那么[]中的内容将被作为表达式进行解析&#125;console.log(obj4);]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>ES6</category>
-      </categories>
-      <tags>
-        <tag>ES6简洁表示法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Javascript（简单讲解一）]]></title>
-    <url>%2F2017%2F07%2F24%2Fgithub-pages-Hexo%2F</url>
-    <content type="text"><![CDATA[优秀的人，不是不合群，而是他们合群的人里面没有你 javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器) javascript(JS)在页面中处理了什么事情？ 特效交互 数据交互 逻辑操作 常见特效的原理 通过js修改元素的css样式，来操作元素的变化。 js可以写在那里？注意：行为(js)，样式（css），结构（html）三者分离 写在标签内部，行间事件【不建议这样写，不容易实现分离】 在标签上通过一些特殊属性，比如onclick，onmouseover等来实现行为的，并且这个行为和当前元素进行了绑定。 12&lt;!--行内js 作用于标签上面--&gt;&lt;button onclick=&quot;alert(123)&quot;&gt;按钮&lt;/button&gt; 写在页面内部专门的script标签中，当浏览器读到script的时候就会解析代码。 123456&lt;button id=&quot;but2&quot;&gt;按钮2&lt;/botton&gt;&lt;script&gt; document.getElementById(&quot;but2&quot;).onclick = function()&#123; alert(&apos;就是这么绑定事件！&apos;); &#125;&lt;/script&gt; 写在外部调用，专门的js文件中【通过src引入】 12&lt;!--外链JS--&gt;&lt;script src=&quot;js/1.js&quot;&gt;&lt;/script&gt; 获取元素 如果要获取的是个id，可以直接写元素的id名[存在浏览器兼容问题] document.getElementById(“idName”); 获取Id 【单、双引号都可以，但是要成对存在】 【翻译：在文档中 获取 元素 通过 ID】 【获取该元素之前，请确保元素已经被解析了】 123456&lt;script&gt; document.getElementById(&quot;but&quot;).onclick = function()&#123; document.getElementById(&quot;div1&quot;).style.width = &quot;200px&quot;; document.getElementById(&quot;div1&quot;).style.height = &quot;200px&quot;; &#125;&lt;/script&gt; 属性操作 属性的读操作(获取元素的属性值) clsss不叫class，叫className 1document.getElementById(&apos;div&apos;).className; style 操作的是元素的行间样式 1234&lt;div id=&quot;div&quot; style=&quot;border:#f00 1px solid;&quot;&gt;&lt;div&gt;&lt;script&gt; document.getElementById(&apos;div&apos;).style;&lt;/script&gt; 获取src的时候获取到的是绝对路径 获取background这类符合样式的时候，火狐（firefox）下可以获取到符合样式中的所有样式而谷歌（chrom）下获取到的只是我们写了的样式 eg:只设置了一个background:color。12345678&lt;div id=&quot;div&quot; style=&quot;background:blue&quot;&gt;&lt;/div&gt;&lt;script&gt; /* *火狐得到的是:blue none repeat scroll 0% 0%; *谷歌得到的是：blue */ document.getElementById(&apos;div&apos;).style.background;&lt;/script&gt; 设置了十六进制颜色，但是获取的时候，获取到的是rgb颜色 eg:background:#f60,得到的是rgb(255, 102, 0)1234567&lt;div id=&quot;div&quot; style=&quot;background:#f60&quot;&gt;&lt;/div&gt;&lt;script&gt; /* * 得到的是rgb(255, 102, 0) */ document.getElementById(&apos;div&apos;).style.background;&lt;/script&gt; 遇到“-”，删除“-”，首字母大写 eg:background-color =&gt; backgroundColor1234&lt;div id=&quot;div&quot; style=&quot;background:#f60&quot;&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&apos;div&apos;).style.backgroundColor;&lt;/script&gt; 属性的写操作(修改元素的属性值) 【注意： 在写left，width等样式时，一定注意加单位 】 把等号右侧的值赋给左侧 1var sum = 100; cssText获取style中所有的内容 直接修改cssText会覆盖style中的所有内容，如果不想覆盖之前的所有内容，可以直接写style，或者用+=；12345678&lt;div id=&quot;div&quot; style=&quot;background:#f60;&quot;&gt;&lt;/div&gt;&lt;script&gt; var div = document.getElementById(&apos;div&apos;); //这个时候style=&quot;color:#f00;&quot; div.cssText = &quot;color:#f00;&quot; //这个时候style=&quot;background:#f60;color:#f00;&quot; div.cssText +=&quot;color:#f00;&quot;&lt;/script&gt; cssText = “” 可以直接清空所有的行间样式。 123456&lt;div id=&quot;div&quot; style=&quot;background:#f60;&quot;&gt;&lt;/div&gt;&lt;script&gt; var div = document.getElementById(&apos;div&apos;); //这个时候style被清空 div.cssText = &quot;&quot;&lt;/script&gt; innerHTML 代表元素中的所有内容 从元素的开标签到闭合标签之间的所有内容，包括元素中的子元素 直接设置元素的innerHTML,或者替换掉之前的所有内容，如果不想替换只是添加内容用+=；12345678910&lt;div id=&quot;div&quot;&gt;&lt;span&gt;aa&lt;/span&gt;&lt;/div&gt;&lt;script&gt; var div = document.getElementById(&apos;div&apos;); //&lt;div id=&quot;div&quot;&gt;aaa&lt;/div&gt; div.innerHTML = &quot;aaa&quot; //&lt;div id=&quot;div&quot;&gt;&lt;span&gt;aa&lt;/span&gt;aaa&lt;/div&gt; div.innerHTML += &quot;aaa&quot;&lt;/script&gt; 字符串 一种数据格式，引号包起来的一串字符 undefined 一种数据类型，未定义 +号运算符 加法运算 链接两个字符串 +=（a += b — a = a + b） 加号有两个作用 一个是加法运算 一个是字符串链接：只有加号左右两侧是数字的情况才会执行加法运算，如果有一侧是字符串就会执行字符串链接，结果也是字符串。 1234var a = &quot;哈哈哈&quot;;var b = 1000;console.log(a+b);//哈哈哈1000console.log(b+a);//1000哈哈哈 变量 变量就相当于给数据起了一个简短的名字 变量的作用：为了方便数据的复用和维护，我们通常用一个东西存放这类数据，我们就把它称为变量。 变量声明 var 变量名 = 要存储的具体数据 变量命名： 以字母开始 变量在命名时最好带有含义 注意不能使用关键字和保留字 驼峰方式命名 不能以数字、特殊符号（除了$,_）开头 后续内容不能包含特殊符号（除了$,_）1234567891011&lt;button id=&quot;but&quot;&gt;按钮1&lt;/button&gt;&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;&lt;script&gt; var but1 = document.getElementById(&apos;but&apos;); var div1 = document.getElementById(&apos;div1&apos;); btn1.onclick = function()&#123; div1.style.width = &quot;200px&quot;; div1.style.height = &quot;200px&quot;; div1.innerHTML = &quot;您好！&quot;； &#125;&lt;/scirpt&gt; 函数 有名字的函数函数声明：function name(){ 要执行的内容}调用:name(); 匿名函数【不能直接使用，只能使用在事件中】 eg:btn1.onclick = function{要执行的内容} 函数调用：把函数执行一遍 事件调用 btn.onclick = name;[注意不加括号] 非事件调用：添加括号 【*注意：btn.onclick = name(); 只会直接执行一次，当点击btn的时候就不执行了；】 【*注意：btn.onclick = function(){name()}; 不直接执行，当点击btn的时候执行；】 什么时候加括号，什么时候不加括号？ 1.当浏览器直接读到这行代码的时候，就执行需要给函数调用加（）； 2.当某种特定的条件下才执行，不需要加（）； window和window.onload onload事件 加载完成 onmouseover和onmouseout 鼠标移入和移出 调试工具： alert()【弹出对话框，接受的是一个字符串】 console.log【打印控制台】 控制台 F12，或者右键-&gt;审查元素方式可以打开调试工具 选择：console 可以通过console进行数据输出，分析，代码调试 123456789101112&lt;button id=&quot;btn&quot;&gt;按钮1&lt;/button&gt;&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;&lt;script&gt; var div1 = document.getElementById(&apos;div1&apos;); var div1 = document.getElementById(&apos;div1&apos;); btn1.onclick = function()&#123; //把信息以日志方式打印到控制台中 console.log(&quot;你好&quot;); //打印数据信息结构 console.dir(div1); &#125;&lt;/script&gt;]]></content>
-      <categories>
-        <category>web前端</category>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>函数</tag>
-        <tag>属性</tag>
-        <tag>变量</tag>
-      </tags>
-  </entry>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[node 初识]]></title>
+      <url>/2017/08/09/20170809-node1/</url>
+      <content type="html"><![CDATA[<h2 id="http—协议"><a href="#http—协议" class="headerlink" title="http—协议"></a>http—协议</h2><ul>
+<li>request    请求    输入-请求的信息</li>
+<li>response    响应    输出-输出的东西<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">const http = require(&apos;http&apos;);</div><div class="line">var server = http.createServer((req,res) =&gt; &#123;</div><div class="line">    switch (req.url)&#123;</div><div class="line">        case &apos;/1.html&apos;:</div><div class="line">            res.write(&apos;one.html&apos;);</div><div class="line">            break;</div><div class="line">        case &apos;/2.html&apos;:</div><div class="line">            res.write(&apos;two.html&apos;);</div><div class="line">            break;</div><div class="line">        default:</div><div class="line">            res.write(&apos;404&apos;);</div><div class="line">            break;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    res.end();</div><div class="line">&#125;);</div><div class="line">server.listen(&apos;8080&apos;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="模块-fs"><a href="#模块-fs" class="headerlink" title="模块 (fs)"></a>模块 (fs)</h2><ul>
+<li>文件操作：fs—File System</li>
+<li>异步 vs 同步<ul>
+<li>异步——多个操作可以同时进行，前一次的操作没完事，后一次也能开始</li>
+<li>同步——一次一个</li>
+</ul>
+</li>
+<li><p>读取文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">readFile(文件名, function (err, data)&#123;&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>写入文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">writeFile(文件名, 内容, function (err)&#123;&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="请求方式："><a href="#请求方式：" class="headerlink" title="请求方式："></a>请求方式：</h2><ol>
+<li>GET        数据在url中</li>
+<li>POST        数据不在url中<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">req.url=&gt;&quot;/aaa?user=blue&amp;pass=123456&quot;</div><div class="line">/aaa</div><div class="line">user=blue&amp;pass=123456</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><p>GET数据解析</p>
+<ul>
+<li><p>1.自己切</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">const http = require(&apos;http&apos;);</div><div class="line">let server = http.createServer((req,res)=&gt;&#123;</div><div class="line">    let Get = &#123;&#125;;</div><div class="line">    var arr = req.url.split(&apos;?&apos;)[1];</div><div class="line"></div><div class="line">    var arr2 = arr.split(&apos;&amp;&apos;);</div><div class="line">    for(var i = 0;i&lt;arr2.length;i++)&#123;</div><div class="line">        var arr3 = arr2[i].split(&apos;=&apos;);</div><div class="line">        Get[arr3[0]] = arr3[1];</div><div class="line">    &#125;</div><div class="line">    console.log(Get);</div><div class="line">&#125;).listen(&apos;8080&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>2.querystring：xxx=xx&amp;xxx=xxx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">const http = require(&apos;http&apos;);</div><div class="line">const queryString = require(&apos;querystring&apos;);</div><div class="line">let server = http.createServer((req,res)=&gt;&#123;</div><div class="line">    var GET = &#123;&#125;</div><div class="line">    if(req.url.indexOf(&apos;?&apos;)!=-1)&#123;</div><div class="line">        var arr = req.url.split(&apos;?&apos;);</div><div class="line">        var url = arr[0];</div><div class="line">         GET=queryString.parse(arr[1]);</div><div class="line">    &#125;else&#123;</div><div class="line">        var url = req.url;</div><div class="line">    &#125;</div><div class="line">    console.log(url,GET);</div><div class="line">&#125;).listen(&apos;8080&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>3.urlLib：aaa?xxx=xx&amp;xx=12</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">const http = require(&apos;http&apos;);</div><div class="line">const urlReq = require(&apos;url&apos;);</div><div class="line">let server = http.createServer((req,res)=&gt;&#123;</div><div class="line">    var obj = urlReq.parse(req.url,true);</div><div class="line">    var url = obj.pathname;</div><div class="line">    var GET = obj.query;</div><div class="line"></div><div class="line">    console.log(url,GET);</div><div class="line">&#125;).listen(&apos;8080&apos;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>POST数据</p>
+</li>
+<li>数据接收<ul>
+<li>req.on(‘data’,function(){});</li>
+<li>req.on(‘end’,function(){});<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">const http = require(&apos;http&apos;);</div><div class="line">http.createServer((req,res)=&gt;&#123;</div><div class="line">    var str = &apos;&apos;;</div><div class="line">    req.on(&apos;data&apos;,function(data)&#123;</div><div class="line">        str += data;</div><div class="line">    &#125;);</div><div class="line">    req.on(&apos;end&apos;,function()&#123;</div><div class="line">        console.log(str);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">&#125;).listen(8080);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><ul>
+<li>post</li>
+<li>get<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">function json2url(json)&#123;</div><div class="line">    var arr=[];</div><div class="line">    for(var name in json)&#123;</div><div class="line">        arr.push(name+&apos;=&apos;+json[name]);</div><div class="line">    &#125;</div><div class="line">    return arr.join(&apos;&amp;&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function ajax(json)&#123;</div><div class="line">    json=json || &#123;&#125;;</div><div class="line">    if(!json.url)return;</div><div class="line">    json.data=json.data || &#123;&#125;;</div><div class="line">    json.type=json.type || &apos;get&apos;;</div><div class="line"></div><div class="line">    var timer=null;</div><div class="line">    //低版本的IE浏览器不支持ActiveXObject(&apos;Microsoft.XMLHTTP&apos;)</div><div class="line">    if(window.XMLHttpRequest)&#123;</div><div class="line">        var oAjax=new XMLHttpRequest();</div><div class="line">    &#125;else&#123;</div><div class="line">        var oAjax=new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //配置请求参数</div><div class="line">    switch(json.type)&#123;</div><div class="line">        case &apos;get&apos;:</div><div class="line">            oAjax.open(&apos;GET&apos;,json.url+&apos;?&apos;+json2url(json.data),true);</div><div class="line">            //3.发送请求</div><div class="line">            oAjax.send();</div><div class="line">            break;</div><div class="line">        case &apos;post&apos;:</div><div class="line">            oAjax.open(&apos;POST&apos;,json.url,true);</div><div class="line">            oAjax.setRequestHeader(&apos;Content-Type&apos;,&apos;application/x-www-form-urlencoded&apos;);</div><div class="line">            oAjax.send(json2url(json.data));</div><div class="line">            break;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /*</div><div class="line">    * 4. 监听返回</div><div class="line">    *   onload属性是标准的XMLHttpRequest才有的事件</div><div class="line">    *   低版本浏览器不支持</div><div class="line">    *   低版本浏览器支持的事件</div><div class="line">    *       onreadystatechange</div><div class="line">    *       属性：readyState</div><div class="line">    *           ajax的工作状态</div><div class="line">    *           0：初始化</div><div class="line">    *           1：调用send方法后（请求发出以后）</div><div class="line">    *           2：请求已经被接收处理</div><div class="line">    *           3：客户端接收到响应，但是内容还不一定完成了解析</div><div class="line">    *           4：解析完成</div><div class="line">    * */</div><div class="line">    oAjax.onreadystatechange=function()&#123;</div><div class="line">        if(oAjax.readyState==4)&#123;</div><div class="line">            clearTimeout(timer);</div><div class="line">            if(oAjax.status&gt;=200 &amp;&amp; oAjax.status&lt;300 || oAjax.status==304)&#123;</div><div class="line">                json.success &amp;&amp; json.success(oAjax.responseText);</div><div class="line">            &#125;else&#123;</div><div class="line">                json.error &amp;&amp; json.error(oAjax.status);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> node </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> node </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[mac 用 n 升级 node]]></title>
+      <url>/2017/08/03/mac-node-up/</url>
+      <content type="html"><![CDATA[<p>切记要按照步骤:</p>
+<ul>
+<li>第一步，先查看本机node.js版本：$ node -v<a id="more"></a></li>
+<li>第二步，清除node.js的cache：$ sudo npm cache clean -f</li>
+<li>第三步，安装 n 工具，这个工具是专门用来管理node.js版本的，别怀疑这个工具的名字，是他是他就是他，他的名字就是 “n”: $ sudo npm install -g n</li>
+<li>第四步，安装最新版本的node.js<ul>
+<li>$ sudo n stable:(安装最新稳定版本)</li>
+<li>$ sudo n latest:(安装最新版本)</li>
+</ul>
+</li>
+<li>第五步，再次查看本机的node.js版本：$ node -v</li>
+</ul>
+<p>【注意：第二步比较重要，有些可以省略有些就不行，所以还是使用的好。】</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+            <category> node.js </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> node </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Node Package Manager[NPM]]]></title>
+      <url>/2017/08/03/20170803-npm/</url>
+      <content type="html"><![CDATA[<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><blockquote>
+<p>node包管理工具(器)，用来管理和维护项目中所用到的一些第三方的代码</p>
+</blockquote>
+<h2 id="官网：https-npmjs-org"><a href="#官网：https-npmjs-org" class="headerlink" title="官网：https://npmjs.org/"></a>官网：<a href="https://npmjs.org/" target="_blank" rel="external">https://npmjs.org/</a></h2><h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><blockquote>
+<p>当前项目／包的说明配置文件，以及其他一些关于当前项目的说明，该文件内必须最少包含下面两个字段</p>
+<ul>
+<li>name：包的名称</li>
+<li>version: 包的版本</li>
+<li>dependencies:可选的</li>
+</ul>
+</blockquote>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul>
+<li><p>npm</p>
+<blockquote>
+<p>直接输入npm 命令，不带任何的参数和选项的话，那么就可以看到npm的使用说明</p>
+</blockquote>
+</li>
+<li><p>npm install &lt;包名&gt;／别名 npm i &lt;包名&gt;</p>
+<ul>
+<li>在当前运行该命名的目录下安装指定的软件包，如果该目录下不存在node_modules目录，然后把包安装在当前目录的node_modules下</li>
+<li>–save / -S:安装当前包的同时，添加该安装包的信息到当前项目的package.json的directories中</li>
+</ul>
+</li>
+</ul>
+<h2 id="npm-init"><a href="#npm-init" class="headerlink" title="npm init"></a>npm init</h2><blockquote>
+<p>初始化一个项目，并且自动生成package.js</p>
+</blockquote>
+<h2 id="npm-uninstall-lt-包名-gt-npm-un-lt-包名-gt"><a href="#npm-uninstall-lt-包名-gt-npm-un-lt-包名-gt" class="headerlink" title="npm uninstall &lt;包名&gt; / npm un &lt;包名&gt;"></a>npm uninstall &lt;包名&gt; / npm un &lt;包名&gt;</h2><blockquote>
+<p>卸载指定的安装包，如果想同时从dependencies中删除依赖信息的话，可以加上 –save/-S</p>
+</blockquote>
+<h2 id="npm-update-lt-包名-gt"><a href="#npm-update-lt-包名-gt" class="headerlink" title="npm update &lt;包名&gt;"></a>npm update &lt;包名&gt;</h2><h2 id="npm-search-lt-包名-gt"><a href="#npm-search-lt-包名-gt" class="headerlink" title="npm search &lt;包名&gt;"></a>npm search &lt;包名&gt;</h2><h2 id="本地安装／全局安装"><a href="#本地安装／全局安装" class="headerlink" title="本地安装／全局安装"></a>本地安装／全局安装</h2><ul>
+<li>本地安装：把包安装到当前项目目录下（node_nodules）</li>
+<li>全局安装：把包安装到当前系统（电脑）的全剧目录下</li>
+<li>区别：安装在本地的包，只能该项目以及该项目下的子目录文件才能访问，安装在全局的包，在整个系统下都可以使用</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> npm </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> npm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[nvm 重启终端失效的解决方法]]></title>
+      <url>/2017/08/01/20170801-nvm-restart-failure/</url>
+      <content type="html"><![CDATA[<h2 id="brew安装"><a href="#brew安装" class="headerlink" title="brew安装"></a>brew安装</h2><ol>
+<li>我们需要按照上面提供的方法,首先在用户更目录下 创建 .nvm 文件,在终端中输入 mkdir ~/.nvm</li>
+<li>然后去编辑你的 bash 配置文件 $HOME/.bashrc ,如果你使用 zsh 那么编辑 $HOME/.zshrc 配置文件,分别是 nano ~/.bashrc 与 nano ~/.zshrc</li>
+<li>把下面的内容粘贴进去<a id="more"></a></li>
+</ol>
+<ul>
+<li>通过 brew install nvm 来安装的nvm粘贴此段</li>
+<li>export NVM_DIR=~/.nvm 与 source $(brew –prefix nvm)/nvm.sh</li>
+</ul>
+<ol>
+<li>最后让你的 shell 配置及时生效,分别是 source ~/.bashrc 与 source ~/.zshrc</li>
+</ol>
+<hr>
+<h2 id="curl安装"><a href="#curl安装" class="headerlink" title="curl安装"></a>curl安装</h2><ol>
+<li><p>打开终端键入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.7/install.sh  bash</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置环境变量(已有 .bash_profile)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</div><div class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置环境变量(无 .bash_profile)</p>
+</li>
+</ol>
+<ul>
+<li>添加 .bash_profile在终端键入 touch ~/.bash_profile</li>
+<li>打开 .bash_profile在终端键入 open -e .bash_profile</li>
+<li>在 .basn_profile中输入 export NVM_DIR=”$HOME/.nvm” 与 [ -s “$NVM_DIR/nvm.sh” ] &amp;&amp; . “$NVM_DIR/nvm.sh” # This loads nvm 两行代码</li>
+</ul>
+<ol>
+<li><p>运行配置文件,在终端键入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.bash_profile</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看配置路径,在终端键入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$PATH</div></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> nvm </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> nvm </tag>
+            
+            <tag> node </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[nvm常用命令]]></title>
+      <url>/2017/08/01/20170801-nvm-node/</url>
+      <content type="html"><![CDATA[<h2 id="nvm常用命令："><a href="#nvm常用命令：" class="headerlink" title="nvm常用命令："></a>nvm常用命令：</h2><ul>
+<li>nvm install <version>  ## 安装指定版本，可模糊安装，如：安装v4.4.0，既可nvm install v4.4.0，又可nvm install 4.4</version></li>
+<li>nvm uninstall <version>  ## 删除已安装的指定版本，语法与install类似<a id="more"></a></version></li>
+<li>nvm use <version>  ## 切换使用指定的版本node</version></li>
+<li>nvm ls  ## 列出所有安装的版本</li>
+<li>nvm ls-remote  ## 列出所以远程服务器的版本（官方node version list）</li>
+<li>nvm current  ## 显示当前的版本</li>
+<li>nvm alias <name> <version>  ## 给不同的版本号添加别名</version></name></li>
+<li>nvm unalias <name>  ## 删除已定义的别名</name></li>
+<li>nvm reinstall-packages <version>  ## 在当前版本node环境下，重新全局安装指定版本号的npm包</version></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> nvm </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> nvm </tag>
+            
+            <tag> node </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ES6（字符串的扩展）]]></title>
+      <url>/2017/07/31/es6-string-extension/</url>
+      <content type="html"><![CDATA[<h2 id="模版字符串"><a href="#模版字符串" class="headerlink" title="模版字符串"></a>模版字符串</h2><ul>
+<li>es6新增的用于表示字符串的语法格式</li>
+<li>以``作为模板字符串的起始和结束符</li>
+<li>是一个增强的字符串标识符<a id="more"></a>
+<ul>
+<li>保持编辑格式</li>
+<li>支持表达式<ul>
+<li>${表达式}</li>
+<li>我们可以把一个js的表达式放置在一个${}中，这里的表达式会被js所解析，注意：不支持语句，比如if，for，while等<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var str = &apos;muban&apos;;</div><div class="line">var str1 = `muban`;</div><div class="line">var str2 = `$&#123;1+2&#125;</div><div class="line">&lt;ul&gt;</div><div class="line">    &lt;li&gt;$&#123;&apos;muban&apos;.toUpperCase()&#125;&lt;/li&gt;</div><div class="line">    &lt;li&gt;$&#123;str1&#125;&lt;/li&gt;</div><div class="line">    &lt;li&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;`</div><div class="line">console.log(str2);</div></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> ES6 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> string </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ES6（函数扩展）]]></title>
+      <url>/2017/07/31/es6-function-extension/</url>
+      <content type="html"><![CDATA[<h2 id="函数参数的默认值"><a href="#函数参数的默认值" class="headerlink" title="函数参数的默认值"></a>函数参数的默认值</h2><ul>
+<li>函数参数的默认值：为函数形参设置默认值</li>
+<li>语法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//有默认值的参数写在后面</div><div class="line">function fn(a,b=1)&#123;&#125;</div><div class="line">function fn(&#123;a,b=1&#125;)&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>注意：定义默认值的参数必须是尾参数，因为定义默认值之后该参数可忽略。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function fn(a,b)&#123;</div><div class="line">	return &#123;a,b&#125;;</div><div class="line">&#125;</div><div class="line">console.log(fn(1,2));//a =1;b=2;</div><div class="line">console.log(fn(1));//a=1;b=undefined;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="剩余参数"><a href="#剩余参数" class="headerlink" title="剩余参数"></a>剩余参数</h2><ul>
+<li>rest参数：用于获取函数的多余参数<ul>
+<li>我们通常会一个函数定义一些参数，有些参数是确定的，而有些参数是不确定（个数）的</li>
+<li>es6之前如果要获取不定参数，一般用anguments不定参来处理</li>
+<li>这里用剩余参数来处理</li>
+</ul>
+</li>
+<li>语法：function fn(a,b=1,….变量名){}</li>
+<li>注意：rest 后边不能再有其他参数，否则会报错。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function fn(a,b,c,....tutu)&#123;</div><div class="line">	console.log(tutu);//用于获取函数的多余参数  tutu是个数组</div><div class="line">&#125;</div><div class="line">fn(1,2,3,4,5,6,7)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="箭头函数：【属于表达式函数】"><a href="#箭头函数：【属于表达式函数】" class="headerlink" title="箭头函数：【属于表达式函数】"></a>箭头函数：【属于表达式函数】</h2><blockquote>
+<p>用来作为回调函数使用。</p>
+</blockquote>
+<ul>
+<li><p>写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//当参数只有一个的时候 小括号可以省略</div><div class="line">var f = a=&gt;a+1;</div><div class="line">//当参数有多个的时候,要加小括号</div><div class="line">var f = (a,b) =&gt;a+b;</div><div class="line">//当没有参数时候,也要加小括号</div><div class="line">var f = () =&gt;a+b;</div><div class="line"></div><div class="line">//只有一条语句的时候，可以省略&#123;&#125;，同时该条语句的返回值</div><div class="line">var fn7 = r =&gt;r * r * Math.PI;</div><div class="line"></div><div class="line">//但是如果有多条语句或者返回值是一个对象，则必须使用&#123;&#125;</div><div class="line">var fn8 = () =&gt;&#123;</div><div class="line">    var result = r * r * Math.PI;</div><div class="line">    console.log(result);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var fn9 = () =&gt;&#123;</div><div class="line">    return &#123;</div><div class="line">        x:10</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>注意</p>
+<ul>
+<li>1、箭头函数的this永远指向 声明时候 作用域的对象<ul>
+<li>普通函数this指向取决于调用</li>
+<li>箭头函数this指向取决于声明</li>
+</ul>
+</li>
+<li>2、不可以当作构造函数，不可以使用new命令，否则会抛出一个错误。</li>
+<li>3、该函数体内不存在arguments。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> ES6 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 函数 </tag>
+            
+            <tag> 参数 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ES6（数组扩展）]]></title>
+      <url>/2017/07/28/es6-array-extension/</url>
+      <content type="html"><![CDATA[<h2 id="扩展运算符（spread）"><a href="#扩展运算符（spread）" class="headerlink" title="扩展运算符（spread）"></a>扩展运算符（spread）</h2><ul>
+<li>扩展运算符（spread）是三个点（…）。它好比rest参数的逆运算，将一个数组转为用逗号分隔的参数序列。该运算符主要用于函数调用。<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4,5,6,7];</div><div class="line">console.log(Math.max(...arr));//7 返回最大值</div><div class="line"></div><div class="line">var arr1 = [1,3,4];</div><div class="line">var arr2 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</div><div class="line">//var arr3 = arr1.concat(arr2);</div><div class="line">var arr3 = [...arr1,...arr2] // 1,3,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="数组推导"><a href="#数组推导" class="headerlink" title="数组推导"></a>数组推导</h2><ul>
+<li>ES6提供简洁写法，允许直接通过现有数组生成新数组，这被称为数组推导（array comprehension）。</li>
+<li>eg:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4,5];</div><div class="line">var arr2 = [for(value of arr) value*2];</div><div class="line">console.log(arr2);//2,4,6,8,10</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> ES6 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ES6（for of）]]></title>
+      <url>/2017/07/28/es6-for-of/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>ES6 借鉴 C++、Java、C# 和 Python 语言，引入了for…of循环，作为遍历所有数据结构的统一的方法。</p>
+</blockquote>
+<ul>
+<li>一个数据结构只要部署了<strong>Symbol.iterator</strong>属性，就被视为具有iterator接口，就可以用for…of循环遍历它的成员。也就是说，for…of循环内部调用的是数据结构的Symbol.iterator方法。</li>
+<li>for…of循环可以使用的范围包括数组、Set 和 Map 结构、某些类似数组的对象（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。<a id="more"></a></li>
+<li>arr.keys():用于for of对数组键名的遍历<ul>
+<li>语法：for(let index of arr.keys()){}</li>
+</ul>
+</li>
+<li>arr.values():用于for of 对数组键值的遍历<ul>
+<li>语法：for(let value of arr.values()){}</li>
+</ul>
+</li>
+<li>arr.entries():用于for of 对数组键值对的遍历<ul>
+<li>语法：for(let[index,ele]of arr.entries()){}</li>
+</ul>
+</li>
+</ul>
+<h3 id="回顾："><a href="#回顾：" class="headerlink" title="回顾："></a>回顾：</h3><ul>
+<li>for in 用来遍历对象的属性名。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</div><div class="line">for (var v in arr) &#123;</div><div class="line">    console.log(v);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="数组类似数组的对象，Set，Map"><a href="#数组类似数组的对象，Set，Map" class="headerlink" title="数组类似数组的对象，Set，Map"></a>数组类似数组的对象，Set，Map</h3><ul>
+<li><strong>数组</strong>原生具备iterator接口（即默认部署了Symbol.iterator属性），for…of循环本质上就是调用这个接口产生的遍历器。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</div><div class="line">for (var v of arr) &#123;</div><div class="line">    console.log(v);  //a,b,c</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="普通对象"><a href="#普通对象" class="headerlink" title="普通对象"></a>普通对象</h3><ul>
+<li>像var a = {‘a’,’b’}这种普通的对象，for…of结构不能直接使用，会报错，必须部署了 Iterator 接口后才能使用，那就要自己设置迭代器<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">// 当我们通过forof去迭代obj的时候，js内部会去查找并调用obj的Symbol.iterator的方法</div><div class="line">//obj[Symbol.iterator]() =&gt; iterator.next() =&gt; 根据返回的对象中的done值，来决定是否已经完成或继续调用next，如果done为真，表示迭代结束通过忽略这次value值，如果为false，表示当前value有效，并继续下一次迭代（next()）</div><div class="line">for (var v of obj) &#123;</div><div class="line">    console.log(v);</div><div class="line">&#125;</div><div class="line">for (var &#123;k,v&#125; of obj) &#123;</div><div class="line">  console.log(k,v);</div><div class="line">&#125;</div><div class="line"></div><div class="line">例如：自己写迭代器</div><div class="line">//如果我们希望一个对象能够被迭代，那么就需要去实现该对象的迭代协议和迭代器</div><div class="line">// 迭代协议</div><div class="line"></div><div class="line">var obj = &#123;x:10,y:20,z:100&#125;</div><div class="line">obj[Symbol.iterator] = function() &#123;</div><div class="line">    //let keys = [&apos;x&apos;, &apos;y&apos;];</div><div class="line">    let keys = Object.keys(obj);</div><div class="line">    let n = -1;</div><div class="line">    return &#123;</div><div class="line">        next() &#123;</div><div class="line">            if (n &lt; keys.length-1) &#123;</div><div class="line">                //return &#123;done: false, value: obj[keys[n++]]&#125;;</div><div class="line">                //return &#123;done: false, value: keys[n++]&#125;;</div><div class="line">                n++;</div><div class="line">                return &#123;done: false, value: &#123;</div><div class="line">                    k: keys[n],</div><div class="line">                    v: obj[keys[n]]</div><div class="line">                &#125;&#125;;</div><div class="line">            &#125; else &#123;</div><div class="line">                return &#123;done: true&#125;;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var objIterator = obj[Symbol.iterator]();</div><div class="line">//console.log(objIterator);</div><div class="line">console.log(objIterator.next());</div><div class="line">console.log(objIterator.next());</div><div class="line">console.log(objIterator.next());</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> ES6 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> for of </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ES6（变量、常量、解构赋值）]]></title>
+      <url>/2017/07/27/es6-let-const-Destructuring-assignment/</url>
+      <content type="html"><![CDATA[<h2 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h2><p><strong>let</strong>：用来声明变量。<br><a id="more"></a><br>【特性】：</p>
+<ol>
+<li>不允许重复声明</li>
+<li>没有预解析，必须在声明之后使用【我们把当前作用域最开始到let声明的变量之间的区域称为-暂存死区】</li>
+<li>块级作用域<ul>
+<li>一对{}包括的区域称为代码块：块级作用域指一个变量或者函数只在该区域才起作用。</li>
+</ul>
+</li>
+</ol>
+<h2 id="常量："><a href="#常量：" class="headerlink" title="常量："></a>常量：</h2><h3 id="什么是常量？"><a href="#什么是常量？" class="headerlink" title="什么是常量？"></a>什么是常量？</h3><p>在定义之后值是固定不变的，即为常量。</p>
+<h3 id="const作用"><a href="#const作用" class="headerlink" title="const作用"></a>const作用</h3><p>用来声明常量，注意：重复声明会报错。</p>
+<h3 id="变量和常量的区别："><a href="#变量和常量的区别：" class="headerlink" title="变量和常量的区别："></a>变量和常量的区别：</h3><p>变量在定值之后可以修改值，常量不可以，但是常量的对象的值是可以修改的。</p>
+<ul>
+<li>常量不可以改，它的子数据可以修改</li>
+<li>如果希望一个对象本身及其子数据都不能变化，那么通过const和freeze同时使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">eg：</div><div class="line">    const a = &#123;x:0&#125;;</div><div class="line">    a = 12; //错误</div><div class="line">    a.x = 10; // 可以修改成功</div><div class="line"></div><div class="line">    //如果不允许修改，那么就可以用冻结对象的方式</div><div class="line">    Object.freeze(obj);</div><div class="line">    a.x = 120;</div><div class="line">    console.log(a); // 改不了，因为已经冻结了</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="解构赋值："><a href="#解构赋值：" class="headerlink" title="解构赋值："></a>解构赋值：</h2><blockquote>
+<p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为结构。</p>
+</blockquote>
+<h3 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h3><blockquote>
+<p>按照对应的顺序解构</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3]</div><div class="line">var [a,b,c] = arr;</div><div class="line">console.log(a,b,c); //答案：1 2 3</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1,[2,3]];</div><div class="line">var [a,b,c] = arr;</div><div class="line">console.log(a,b,c); //1 [2,3] undefind</div></pre></td></tr></table></figure>
+<h3 id="对象的解构赋值："><a href="#对象的解构赋值：" class="headerlink" title="对象的解构赋值："></a>对象的解构赋值：</h3><blockquote>
+<p>根据名称来找的</p>
+</blockquote>
+<ul>
+<li>1.声明{}中的变量</li>
+<li>2.根据{}中的变量，去=后面的对象中提取对应的属性，并把该属性对应的值赋值给前面对应的变量，如果没有该属性，返回undefined</li>
+<li>3.如果我们希望解构出来的属性名在使用的时候使用的是另一个名称，那么这个时候需要给需要使用的变量名设置一个别名<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//取出left别名L，去除top别名T</div><div class="line">let &#123;left:L,top:T,a&#125;=getComputedStyle(document.body);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	foo:function()&#123;</div><div class="line">	&#125;,</div><div class="line">	o:&#123;&#125;,</div><div class="line">	arr:[],</div><div class="line">	str:&apos;abc&apos;</div><div class="line">&#125;</div><div class="line">var &#123;foo,arr,str&#125; = obj;</div><div class="line">console.log(foo,arr,str);//function()&#123;&#125; [] abc object</div></pre></td></tr></table></figure>
+<h3 id="交换值："><a href="#交换值：" class="headerlink" title="交换值："></a>交换值：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var x = 1;</div><div class="line">var y = 2;</div><div class="line">var [x,y] = [y,x];</div><div class="line">console.log(x,y);//2 1;</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> ES6 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> let </tag>
+            
+            <tag> const </tag>
+            
+            <tag> 解构赋值 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ES6（对象的扩展）]]></title>
+      <url>/2017/07/27/es6-object-extension/</url>
+      <content type="html"><![CDATA[<h2 id="属性的简洁表示法"><a href="#属性的简洁表示法" class="headerlink" title="属性的简洁表示法:"></a>属性的简洁表示法:</h2><blockquote>
+<p>当一个对象的key和对应的值（必须是一个变量名称）同名的话，那么可以简写成一个key</p>
+</blockquote>
+<ul>
+<li>允许直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。<br>例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function f(x,y)&#123;</div><div class="line">	x++;</div><div class="line">	y++;</div><div class="line">	return &#123;x,y&#125;</div><div class="line">&#125;</div><div class="line">console.log(f(1,2));//&#123;x:2,y:3&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="方法的简洁表示法：例如："><a href="#方法的简洁表示法：例如：" class="headerlink" title="方法的简洁表示法：例如："></a>方法的简洁表示法：例如：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">普通：</div><div class="line">let obj2 = &#123;</div><div class="line">    a:a,</div><div class="line">    fn:function()&#123;</div><div class="line">        console.log(1);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">es6:</div><div class="line">let obj3 = &#123;</div><div class="line">    a,</div><div class="line">    fn()&#123;</div><div class="line">        console.log(1);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="属性名表达式"><a href="#属性名表达式" class="headerlink" title="属性名表达式"></a>属性名表达式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var x = &apos;username&apos;;</div><div class="line">let obj4 = &#123;</div><div class="line">    //x: &apos;motao&apos;  //这里的x不会作为变量表达式进行解析</div><div class="line">    [x]: &apos;motao&apos;    //如果把key放在一个[]中，那么[]中的内容将被作为表达式进行解析</div><div class="line">&#125;</div><div class="line">console.log(obj4);</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> ES6 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> ES6简洁表示法 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Javascript（简单讲解一）]]></title>
+      <url>/2017/07/24/github-pages-Hexo/</url>
+      <content type="html"><![CDATA[<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
+
+<h2 id="javascript-JS-的组成？"><a href="#javascript-JS-的组成？" class="headerlink" title="javascript(JS)的组成？"></a>javascript(JS)的组成？</h2><ul>
+<li>DOM 文档对象模型</li>
+<li>BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好]</li>
+<li>ECMAScript 核心(翻译器)<a id="more"></a>
+<h2 id="javascript-JS-在页面中处理了什么事情？"><a href="#javascript-JS-在页面中处理了什么事情？" class="headerlink" title="javascript(JS)在页面中处理了什么事情？"></a>javascript(JS)在页面中处理了什么事情？</h2></li>
+<li>特效交互</li>
+<li>数据交互</li>
+<li>逻辑操作</li>
+</ul>
+<h2 id="常见特效的原理"><a href="#常见特效的原理" class="headerlink" title="常见特效的原理"></a>常见特效的原理</h2><ul>
+<li>通过js修改元素的css样式，来操作元素的变化。</li>
+</ul>
+<h2 id="js可以写在那里？"><a href="#js可以写在那里？" class="headerlink" title="js可以写在那里？"></a>js可以写在那里？</h2><p>注意：行为(js)，样式（css），结构（html）三者分离</p>
+<ul>
+<li><p>写在标签内部，行间事件【不建议这样写，不容易实现分离】</p>
+<ul>
+<li>在标签上通过一些特殊属性，比如onclick，onmouseover等来实现行为的，并且这个行为和当前元素进行了绑定。  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!--行内js 作用于标签上面--&gt;</div><div class="line">&lt;button onclick=&quot;alert(123)&quot;&gt;按钮&lt;/button&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>写在页面内部专门的script标签中，当浏览器读到script的时候就会解析代码。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;but2&quot;&gt;按钮2&lt;/botton&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	document.getElementById(&quot;but2&quot;).onclick = function()&#123;</div><div class="line">		alert(&apos;就是这么绑定事件！&apos;);</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>写在外部调用，专门的js文件中【通过src引入】</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!--外链JS--&gt;</div><div class="line">&lt;script src=&quot;js/1.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><ul>
+<li>如果要获取的是个id，可以直接写元素的id名[存在浏览器兼容问题]</li>
+<li><p>document.getElementById(“idName”); 获取Id</p>
+<ul>
+<li>【单、双引号都可以，但是要成对存在】</li>
+<li>【翻译：在文档中 获取 元素 通过 ID】</li>
+<li>【获取该元素之前，请确保元素已经被解析了】</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    document.getElementById(&quot;but&quot;).onclick = function()&#123;</div><div class="line">    	document.getElementById(&quot;div1&quot;).style.width  = &quot;200px&quot;;</div><div class="line">    	document.getElementById(&quot;div1&quot;).style.height = &quot;200px&quot;;</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h2 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h2><ul>
+<li><p>属性的读操作(获取元素的属性值)</p>
+<ul>
+<li><p>clsss不叫class，叫className</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&apos;div&apos;).className;</div></pre></td></tr></table></figure>
+</li>
+<li><p>style 操作的是元素的行间样式</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;border:#f00 1px solid;&quot;&gt;&lt;div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    document.getElementById(&apos;div&apos;).style;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取src的时候获取到的是绝对路径</p>
+</li>
+<li><p>获取background这类符合样式的时候，火狐（firefox）下可以获取到符合样式中的所有样式而谷歌（chrom）下获取到的只是我们写了的样式</p>
+<ul>
+<li>eg:只设置了一个background:color。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:blue&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    /*</div><div class="line">    *火狐得到的是:blue none repeat scroll 0% 0%;</div><div class="line">    *谷歌得到的是：blue</div><div class="line">    */</div><div class="line">     document.getElementById(&apos;div&apos;).style.background;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>设置了十六进制颜色，但是获取的时候，获取到的是rgb颜色</p>
+<ul>
+<li>eg:background:#f60,得到的是rgb(255, 102, 0)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    /*</div><div class="line">    * 得到的是rgb(255, 102, 0)</div><div class="line">    */</div><div class="line">     document.getElementById(&apos;div&apos;).style.background;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>遇到“-”，删除“-”，首字母大写</p>
+<ul>
+<li>eg:background-color  =&gt; backgroundColor<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     document.getElementById(&apos;div&apos;).style.backgroundColor;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性的写操作(修改元素的属性值)</p>
+<p>  <strong>【注意： 在写left，width等样式时，一定注意加单位 】</strong></p>
+<ul>
+<li><p>把等号右侧的值赋给左侧</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var sum = 100;</div></pre></td></tr></table></figure>
+</li>
+<li><p>cssText获取<strong>style</strong>中所有的内容</p>
+<ul>
+<li>直接修改cssText会覆盖style中的所有内容，如果不想覆盖之前的所有内容，可以直接写style，或者用+=；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     var div = document.getElementById(&apos;div&apos;);</div><div class="line">     //这个时候style=&quot;color:#f00;&quot;</div><div class="line">     div.cssText = &quot;color:#f00;&quot;</div><div class="line">     //这个时候style=&quot;background:#f60;color:#f00;&quot;</div><div class="line">     div.cssText +=&quot;color:#f00;&quot;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>cssText = “” 可以直接清空所有的行间样式。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     var div = document.getElementById(&apos;div&apos;);</div><div class="line">     //这个时候style被清空</div><div class="line">     div.cssText = &quot;&quot;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>innerHTML 代表元素中的所有内容</p>
+<ul>
+<li>从元素的开标签到闭合标签之间的所有内容，包括元素中的子元素</li>
+<li>直接设置元素的innerHTML,或者替换掉之前的所有内容，如果不想替换只是添加内容用+=；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot;&gt;&lt;span&gt;aa&lt;/span&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     var div = document.getElementById(&apos;div&apos;);</div><div class="line"></div><div class="line">     //&lt;div id=&quot;div&quot;&gt;aaa&lt;/div&gt;</div><div class="line">     div.innerHTML = &quot;aaa&quot;</div><div class="line"></div><div class="line">     //&lt;div id=&quot;div&quot;&gt;&lt;span&gt;aa&lt;/span&gt;aaa&lt;/div&gt;</div><div class="line">     div.innerHTML += &quot;aaa&quot;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><ul>
+<li>一种数据格式，引号包起来的一串字符</li>
+</ul>
+<h2 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h2><ul>
+<li>一种数据类型，未定义</li>
+</ul>
+<h2 id="号运算符"><a href="#号运算符" class="headerlink" title="+号运算符"></a>+号运算符</h2><ul>
+<li>加法运算</li>
+<li>链接两个字符串</li>
+<li>+=（a += b  — a = a + b）</li>
+<li><p>加号有两个作用</p>
+<ul>
+<li>一个是加法运算</li>
+<li><p>一个是字符串链接：只有加号左右两侧是数字的情况才会执行加法运算，如果有一侧是字符串就会执行字符串链接，结果也是字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = &quot;哈哈哈&quot;;</div><div class="line">var b = 1000;</div><div class="line">console.log(a+b);//哈哈哈1000</div><div class="line">console.log(b+a);//1000哈哈哈</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>变量就相当于给数据起了一个简短的名字</li>
+<li>变量的作用：为了方便数据的复用和维护，我们通常用一个东西存放这类数据，我们就把它称为变量。</li>
+<li>变量声明<ul>
+<li>var 变量名 = 要存储的具体数据</li>
+</ul>
+</li>
+<li>变量命名：<ul>
+<li><ol>
+<li>以字母开始</li>
+</ol>
+</li>
+<li><ol>
+<li>变量在命名时最好带有含义</li>
+</ol>
+</li>
+<li><ol>
+<li>注意不能使用关键字和保留字</li>
+</ol>
+</li>
+<li><ol>
+<li>驼峰方式命名</li>
+</ol>
+</li>
+<li><ol>
+<li>不能以数字、特殊符号（除了$,_）开头</li>
+</ol>
+</li>
+<li><ol>
+<li>后续内容不能包含特殊符号（除了$,_）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;but&quot;&gt;按钮1&lt;/button&gt;</div><div class="line">&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var but1 = document.getElementById(&apos;but&apos;);</div><div class="line">	var div1 = document.getElementById(&apos;div1&apos;);</div><div class="line">	btn1.onclick = function()&#123;</div><div class="line">		div1.style.width = &quot;200px&quot;;</div><div class="line">		div1.style.height = &quot;200px&quot;;</div><div class="line">		div1.innerHTML = &quot;您好！&quot;；</div><div class="line">	&#125;</div><div class="line">&lt;/scirpt&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
+<li><p>有名字的函数<br>函数声明：<br>function name(){<br>  要执行的内容<br>}<br>调用:name();</p>
+</li>
+<li><p>匿名函数【不能直接使用，只能使用在事件中】</p>
+<ul>
+<li>eg:btn1.onclick = function{要执行的内容}</li>
+</ul>
+</li>
+<li><p>函数调用：把函数执行一遍</p>
+<ul>
+<li>事件调用 btn.onclick = name;[注意不加括号]</li>
+<li><p>非事件调用：添加括号</p>
+<p>【*注意：btn.onclick = name(); 只会直接执行一次，当点击btn的时候就不执行了；】</p>
+<p>【*注意：btn.onclick = function(){name()}; 不直接执行，当点击btn的时候执行；】</p>
+</li>
+</ul>
+</li>
+<li><p>什么时候加括号，什么时候不加括号？</p>
+<ul>
+<li>1.当浏览器直接读到这行代码的时候，就执行需要给函数调用加（）；</li>
+<li>2.当某种特定的条件下才执行，不需要加（）；</li>
+</ul>
+</li>
+</ul>
+<h2 id="window和window-onload"><a href="#window和window-onload" class="headerlink" title="window和window.onload"></a>window和window.onload</h2><ul>
+<li>onload事件 加载完成</li>
+</ul>
+<h2 id="onmouseover和onmouseout"><a href="#onmouseover和onmouseout" class="headerlink" title="onmouseover和onmouseout"></a>onmouseover和onmouseout</h2><blockquote>
+<p>鼠标移入和移出</p>
+</blockquote>
+<h2 id="调试工具："><a href="#调试工具：" class="headerlink" title="调试工具："></a>调试工具：</h2><ul>
+<li>alert()【弹出对话框，接受的是一个字符串】</li>
+<li>console.log【打印控制台】</li>
+</ul>
+<ul>
+<li>控制台</li>
+<li>F12，或者右键-&gt;审查元素方式可以打开调试工具</li>
+<li>选择：console</li>
+<li>可以通过console进行数据输出，分析，代码调试</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;btn&quot;&gt;按钮1&lt;/button&gt;</div><div class="line">&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var div1 = document.getElementById(&apos;div1&apos;);</div><div class="line">	var div1 = document.getElementById(&apos;div1&apos;);</div><div class="line">	btn1.onclick = function()&#123;</div><div class="line">		//把信息以日志方式打印到控制台中</div><div class="line">		console.log(&quot;你好&quot;);</div><div class="line">		//打印数据信息结构</div><div class="line">		console.dir(div1);</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 函数 </tag>
+            
+            <tag> 属性 </tag>
+            
+            <tag> 变量 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
 </search>
