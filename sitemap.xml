@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2017-08-09T02:36:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/08/03/mac-node-up/</loc>
     
     <lastmod>2017-08-03T04:01:36.000Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>http://yoursite.com/2017/07/27/es6-object-extension/</loc>
     
     <lastmod>2017-07-27T11:15:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    
-    <lastmod>2017-07-27T01:31:45.000Z</lastmod>
     
   </url>
   
