@@ -1,16 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[ES6 - 函数扩展]]></title>
-    <url>%2F2017%2F07%2F27%2Fes6-function-extension%2F</url>
-    <content type="text"><![CDATA[函数参数的默认值 函数参数的默认值：为函数形参设置默认值 语法：123//有默认值的参数写在后面function fn(a,b=1)&#123;&#125;function fn(&#123;a,b=1&#125;)&#123;&#125; 注意：定义默认值的参数必须是尾参数，因为定义默认值之后该参数可忽略。123456789101112131415function fn(a,b)&#123; return &#123;a,b&#125;;&#125;console.log(fn(1,2));//a =1;b=2;console.log(fn(1));//a=1;b=2;/* 初始化赋值function ajax(options)&#123; var opt = &#123; type:options.type || &apos;get&apos;; &#125;&#125;ajax(&#123;&#125;);*/ 剩余参数 rest参数：用于获取函数的多余参数 我们通常会一个函数定义一些参数，有些参数是确定的，而有些参数是不确定（个数）的 es6之前如果要获取布丁参数，一般用anguments不定参来处理 这里用剩余参数来处理 语法：function fn(a,b=1,….变量名){} 注意：rest 后边不能再有其他参数，否则会报错。1234function fn(a,b,c,....tutu)&#123; console.log(tutu);//用于获取函数的多余参数 tutu是个数组&#125;fn(1,2,3,4,5,6,7) 扩展运算符（spread） 扩展运算符（spread）是三个点（…）。它好比rest参数的逆运算，将一个数组转为用逗号分隔的参数序列。该运算符主要用于函数调用。1234567var arr = [1,2,3,4,5,6,7];console.log(Math.max(...arr));//7 返回最大值var arr1 = [1,3,4];var arr2 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];//var arr3 = arr1.concat(arr2);var arr3 = [...arr1,...arr2] // 1,3,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;; 箭头函数：【属于表达式函数】 用来作为回调函数使用。 写法123456789101112131415161718192021//当参数只有一个的时候 小括号可以省略var f = a=&gt;a+1;//当参数有多个的时候,要加小括号var f = (a,b) =&gt;a+b;//当没有参数时候,也要加小括号var f = () =&gt;a+b;//只有一条语句的时候，可以省略&#123;&#125;，同时该条语句的返回值var fn7 = r =&gt;r * r * Math.PI;//但是如果有多条语句或者返回值是一个对象，则必须使用&#123;&#125;var fn8 = () =&gt;&#123; var result = r * r * Math.PI; console.log(result);&#125;var fn9 = () =&gt;&#123; return &#123; x:10 &#125;&#125; 注意 1、箭头函数的this永远指向 声明时候 作用域的对象 普通函数this指向取决于调用 箭头函数this指向取决于声明 2、不可以当作构造函数，不可以使用new命令，否则会抛出一个错误。 3、该函数体内不存在arguments。]]></content>
+    <title><![CDATA[mac 用 n 升级 node]]></title>
+    <url>%2F2017%2F08%2F03%2Fmac-node-up%2F</url>
+    <content type="text"><![CDATA[切记要按照步骤: 第一步，先查看本机node.js版本：$ node -v 第二步，清除node.js的cache：$ sudo npm cache clean -f 第三步，安装 n 工具，这个工具是专门用来管理node.js版本的，别怀疑这个工具的名字，是他是他就是他，他的名字就是 “n”: $ sudo npm install -g n 第四步，安装最新版本的node.js $ sudo n stable:(安装最新稳定版本) $ sudo n latest:(安装最新版本) 第五步，再次查看本机的node.js版本：$ node -v 【注意：第二步比较重要，有些可以省略有些就不行，所以还是使用的好。】]]></content>
+      <categories>
+        <category>前端</category>
+        <category>node.js</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Node Package Manager[NPM]]]></title>
+    <url>%2F2017%2F08%2F03%2F20170803-npm%2F</url>
+    <content type="text"><![CDATA[NPM node包管理工具(器)，用来管理和维护项目中所用到的一些第三方的代码 官网：https://npmjs.org/package.json 当前项目／包的说明配置文件，以及其他一些关于当前项目的说明，该文件内必须最少包含下面两个字段 name：包的名称 version: 包的版本 dependencies:可选的 命令 npm 直接输入npm 命令，不带任何的参数和选项的话，那么就可以看到npm的使用说明 npm install &lt;包名&gt;／别名 npm i &lt;包名&gt; 在当前运行该命名的目录下安装指定的软件包，如果该目录下不存在node_modules目录，然后把包安装在当前目录的node_modules下 –save / -S:安装当前包的同时，添加该安装包的信息到当前项目的package.json的directories中 npm init 初始化一个项目，并且自动生成package.js npm uninstall &lt;包名&gt; / npm un &lt;包名&gt; 卸载指定的安装包，如果想同时从dependencies中删除依赖信息的话，可以加上 –save/-S npm update &lt;包名&gt;npm search &lt;包名&gt;本地安装／全局安装 本地安装：把包安装到当前项目目录下（node_nodules） 全局安装：把包安装到当前系统（电脑）的全剧目录下 区别：安装在本地的包，只能该项目以及该项目下的子目录文件才能访问，安装在全局的包，在整个系统下都可以使用]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nvm 重启终端失效的解决方法]]></title>
+    <url>%2F2017%2F08%2F01%2F20170801-nvm-restart-failure%2F</url>
+    <content type="text"><![CDATA[brew安装 我们需要按照上面提供的方法,首先在用户更目录下 创建 .nvm 文件,在终端中输入 mkdir ~/.nvm 然后去编辑你的 bash 配置文件 $HOME/.bashrc ,如果你使用 zsh 那么编辑 $HOME/.zshrc 配置文件,分别是 nano ~/.bashrc 与 nano ~/.zshrc 把下面的内容粘贴进去 通过 brew install nvm 来安装的nvm粘贴此段 export NVM_DIR=~/.nvm 与 source $(brew –prefix nvm)/nvm.sh 最后让你的 shell 配置及时生效,分别是 source ~/.bashrc 与 source ~/.zshrc curl安装 打开终端键入： 1curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.7/install.sh bash 配置环境变量(已有 .bash_profile) 12export NVM_DIR=&quot;$HOME/.nvm&quot;[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm 配置环境变量(无 .bash_profile) 添加 .bash_profile在终端键入 touch ~/.bash_profile 打开 .bash_profile在终端键入 open -e .bash_profile 在 .basn_profile中输入 export NVM_DIR=”$HOME/.nvm” 与 [ -s “$NVM_DIR/nvm.sh” ] &amp;&amp; . “$NVM_DIR/nvm.sh” # This loads nvm 两行代码 运行配置文件,在终端键入 1source ~/.bash_profile 查看配置路径,在终端键入 1$PATH]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>nvm</category>
+      </categories>
+      <tags>
+        <tag>nvm</tag>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nvm常用命令]]></title>
+    <url>%2F2017%2F08%2F01%2F20170801-nvm-node%2F</url>
+    <content type="text"><![CDATA[nvm常用命令： nvm install ## 安装指定版本，可模糊安装，如：安装v4.4.0，既可nvm install v4.4.0，又可nvm install 4.4 nvm uninstall ## 删除已安装的指定版本，语法与install类似 nvm use ## 切换使用指定的版本node nvm ls ## 列出所有安装的版本 nvm ls-remote ## 列出所以远程服务器的版本（官方node version list） nvm current ## 显示当前的版本 nvm alias ## 给不同的版本号添加别名 nvm unalias ## 删除已定义的别名 nvm reinstall-packages ## 在当前版本node环境下，重新全局安装指定版本号的npm包]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>nvm</category>
+      </categories>
+      <tags>
+        <tag>nvm</tag>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ES6（字符串的扩展）]]></title>
+    <url>%2F2017%2F07%2F31%2Fes6-string-extension%2F</url>
+    <content type="text"><![CDATA[模版字符串 es6新增的用于表示字符串的语法格式 以``作为模板字符串的起始和结束符 是一个增强的字符串标识符 保持编辑格式 支持表达式 ${表达式} 我们可以把一个js的表达式放置在一个${}中，这里的表达式会被js所解析，注意：不支持语句，比如if，for，while等123456789var str = &apos;muban&apos;;var str1 = `muban`;var str2 = `$&#123;1+2&#125;&lt;ul&gt; &lt;li&gt;$&#123;&apos;muban&apos;.toUpperCase()&#125;&lt;/li&gt; &lt;li&gt;$&#123;str1&#125;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;&lt;/ul&gt;`console.log(str2);]]></content>
       <categories>
         <category>web前端</category>
         <category>ES6</category>
       </categories>
       <tags>
-        <tag>箭头函数</tag>
-        <tag>剩余参数</tag>
+        <tag>string</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ES6（函数扩展）]]></title>
+    <url>%2F2017%2F07%2F31%2Fes6-function-extension%2F</url>
+    <content type="text"><![CDATA[函数参数的默认值 函数参数的默认值：为函数形参设置默认值 语法：123//有默认值的参数写在后面function fn(a,b=1)&#123;&#125;function fn(&#123;a,b=1&#125;)&#123;&#125; 注意：定义默认值的参数必须是尾参数，因为定义默认值之后该参数可忽略。12345function fn(a,b)&#123; return &#123;a,b&#125;;&#125;console.log(fn(1,2));//a =1;b=2;console.log(fn(1));//a=1;b=undefined; 剩余参数 rest参数：用于获取函数的多余参数 我们通常会一个函数定义一些参数，有些参数是确定的，而有些参数是不确定（个数）的 es6之前如果要获取不定参数，一般用anguments不定参来处理 这里用剩余参数来处理 语法：function fn(a,b=1,….变量名){} 注意：rest 后边不能再有其他参数，否则会报错。1234function fn(a,b,c,....tutu)&#123; console.log(tutu);//用于获取函数的多余参数 tutu是个数组&#125;fn(1,2,3,4,5,6,7) 箭头函数：【属于表达式函数】 用来作为回调函数使用。 写法 123456789101112131415161718192021//当参数只有一个的时候 小括号可以省略var f = a=&gt;a+1;//当参数有多个的时候,要加小括号var f = (a,b) =&gt;a+b;//当没有参数时候,也要加小括号var f = () =&gt;a+b;//只有一条语句的时候，可以省略&#123;&#125;，同时该条语句的返回值var fn7 = r =&gt;r * r * Math.PI;//但是如果有多条语句或者返回值是一个对象，则必须使用&#123;&#125;var fn8 = () =&gt;&#123; var result = r * r * Math.PI; console.log(result);&#125;var fn9 = () =&gt;&#123; return &#123; x:10 &#125;&#125; 注意 1、箭头函数的this永远指向 声明时候 作用域的对象 普通函数this指向取决于调用 箭头函数this指向取决于声明 2、不可以当作构造函数，不可以使用new命令，否则会抛出一个错误。 3、该函数体内不存在arguments。]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>函数</tag>
+        <tag>参数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ES6（数组扩展）]]></title>
+    <url>%2F2017%2F07%2F28%2Fes6-array-extension%2F</url>
+    <content type="text"><![CDATA[扩展运算符（spread） 扩展运算符（spread）是三个点（…）。它好比rest参数的逆运算，将一个数组转为用逗号分隔的参数序列。该运算符主要用于函数调用。 1234567var arr = [1,2,3,4,5,6,7];console.log(Math.max(...arr));//7 返回最大值var arr1 = [1,3,4];var arr2 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];//var arr3 = arr1.concat(arr2);var arr3 = [...arr1,...arr2] // 1,3,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;; 数组推导 ES6提供简洁写法，允许直接通过现有数组生成新数组，这被称为数组推导（array comprehension）。 eg:123var arr = [1,2,3,4,5];var arr2 = [for(value of arr) value*2];console.log(arr2);//2,4,6,8,10]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ES6（for of）]]></title>
+    <url>%2F2017%2F07%2F28%2Fes6-for-of%2F</url>
+    <content type="text"><![CDATA[ES6 借鉴 C++、Java、C# 和 Python 语言，引入了for…of循环，作为遍历所有数据结构的统一的方法。 一个数据结构只要部署了Symbol.iterator属性，就被视为具有iterator接口，就可以用for…of循环遍历它的成员。也就是说，for…of循环内部调用的是数据结构的Symbol.iterator方法。 for…of循环可以使用的范围包括数组、Set 和 Map 结构、某些类似数组的对象（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。 arr.keys():用于for of对数组键名的遍历 语法：for(let index of arr.keys()){} arr.values():用于for of 对数组键值的遍历 语法：for(let value of arr.values()){} arr.entries():用于for of 对数组键值对的遍历 语法：for(let[index,ele]of arr.entries()){} 回顾： for in 用来遍历对象的属性名。1234var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];for (var v in arr) &#123; console.log(v);&#125; 数组类似数组的对象，Set，Map 数组原生具备iterator接口（即默认部署了Symbol.iterator属性），for…of循环本质上就是调用这个接口产生的遍历器。1234var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];for (var v of arr) &#123; console.log(v); //a,b,c&#125; 普通对象 像var a = {‘a’,’b’}这种普通的对象，for…of结构不能直接使用，会报错，必须部署了 Iterator 接口后才能使用，那就要自己设置迭代器12345678910111213141516171819202122232425262728293031323334353637383940// 当我们通过forof去迭代obj的时候，js内部会去查找并调用obj的Symbol.iterator的方法//obj[Symbol.iterator]() =&gt; iterator.next() =&gt; 根据返回的对象中的done值，来决定是否已经完成或继续调用next，如果done为真，表示迭代结束通过忽略这次value值，如果为false，表示当前value有效，并继续下一次迭代（next()）for (var v of obj) &#123; console.log(v);&#125;for (var &#123;k,v&#125; of obj) &#123; console.log(k,v);&#125;例如：自己写迭代器//如果我们希望一个对象能够被迭代，那么就需要去实现该对象的迭代协议和迭代器// 迭代协议var obj = &#123;x:10,y:20,z:100&#125;obj[Symbol.iterator] = function() &#123; //let keys = [&apos;x&apos;, &apos;y&apos;]; let keys = Object.keys(obj); let n = -1; return &#123; next() &#123; if (n &lt; keys.length-1) &#123; //return &#123;done: false, value: obj[keys[n++]]&#125;; //return &#123;done: false, value: keys[n++]&#125;; n++; return &#123;done: false, value: &#123; k: keys[n], v: obj[keys[n]] &#125;&#125;; &#125; else &#123; return &#123;done: true&#125;; &#125; &#125; &#125;&#125;;var objIterator = obj[Symbol.iterator]();//console.log(objIterator);console.log(objIterator.next());console.log(objIterator.next());console.log(objIterator.next());]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>for of</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ES6（变量、常量、解构赋值）]]></title>
+    <url>%2F2017%2F07%2F27%2Fes6-let-const-Destructuring-assignment%2F</url>
+    <content type="text"><![CDATA[变量：let：用来声明变量。【特性】： 不允许重复声明 没有预解析，必须在声明之后使用【我们把当前作用域最开始到let声明的变量之间的区域称为-暂存死区】 块级作用域 一对{}包括的区域称为代码块：块级作用域指一个变量或者函数只在该区域才起作用。 常量：什么是常量？在定义之后值是固定不变的，即为常量。 const作用用来声明常量，注意：重复声明会报错。 变量和常量的区别：变量在定值之后可以修改值，常量不可以，但是常量的对象的值是可以修改的。 常量不可以改，它的子数据可以修改 如果希望一个对象本身及其子数据都不能变化，那么通过const和freeze同时使用123456789eg： const a = &#123;x:0&#125;; a = 12; //错误 a.x = 10; // 可以修改成功 //如果不允许修改，那么就可以用冻结对象的方式 Object.freeze(obj); a.x = 120; console.log(a); // 改不了，因为已经冻结了 解构赋值： ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为结构。 数组的解构赋值 按照对应的顺序解构 123var arr = [1,2,3]var [a,b,c] = arr;console.log(a,b,c); //答案：1 2 3 123var arr = [1,[2,3]];var [a,b,c] = arr;console.log(a,b,c); //1 [2,3] undefind 对象的解构赋值： 根据名称来找的 1.声明{}中的变量 2.根据{}中的变量，去=后面的对象中提取对应的属性，并把该属性对应的值赋值给前面对应的变量，如果没有该属性，返回undefined 3.如果我们希望解构出来的属性名在使用的时候使用的是另一个名称，那么这个时候需要给需要使用的变量名设置一个别名12//取出left别名L，去除top别名Tlet &#123;left:L,top:T,a&#125;=getComputedStyle(document.body); 123456789var obj = &#123; foo:function()&#123; &#125;, o:&#123;&#125;, arr:[], str:&apos;abc&apos;&#125;var &#123;foo,arr,str&#125; = obj;console.log(foo,arr,str);//function()&#123;&#125; [] abc object 交换值：1234var x = 1;var y = 2;var [x,y] = [y,x];console.log(x,y);//2 1;]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>let</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ES6（对象的扩展）]]></title>
+    <url>%2F2017%2F07%2F27%2Fes6-object-extension%2F</url>
+    <content type="text"><![CDATA[属性的简洁表示法: 当一个对象的key和对应的值（必须是一个变量名称）同名的话，那么可以简写成一个key 允许直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。例如：123456function f(x,y)&#123; x++; y++; return &#123;x,y&#125;&#125;console.log(f(1,2));//&#123;x:2,y:3&#125; 方法的简洁表示法：例如：1234567891011121314普通：let obj2 = &#123; a:a, fn:function()&#123; console.log(1); &#125;&#125;es6:let obj3 = &#123; a, fn()&#123; console.log(1); &#125;&#125; 属性名表达式123456var x = &apos;username&apos;;let obj4 = &#123; //x: &apos;motao&apos; //这里的x不会作为变量表达式进行解析 [x]: &apos;motao&apos; //如果把key放在一个[]中，那么[]中的内容将被作为表达式进行解析&#125;console.log(obj4);]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>ES6简洁表示法</tag>
       </tags>
   </entry>
   <entry>
@@ -22,9 +134,9 @@
         <category>javascript</category>
       </categories>
       <tags>
+        <tag>函数</tag>
         <tag>属性</tag>
         <tag>变量</tag>
-        <tag>函数</tag>
       </tags>
   </entry>
 </search>
