@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[(一)Vue.js入门]]></title>
+    <url>%2F2017%2F09%2F23%2Fvue-one1%2F</url>
+    <content type="text"><![CDATA[初识vueVue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。 用户界面，视图层是什么意思？ 不是指ui界面，不是是界面是如何布局的，怎么漂亮的。 而是指，数据如何渲染到页面中。 说白了，就是如何将 静态页面 变成动态页面。 比如，有一个mui（），它才是实现ui的，Vue就可以和mui进行组合使用。 Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。 vue是国产的。 大尤原来就职于google，就是angularjs开发组的。后来就在angularjs的基础上，借鉴了react，开发了一个vue的前端框架。 整个2016年，前端领域，属于vue年。 前端目前最火的三大框架：vue.jsreact.jsangularjs 我的建议是：必须要熟练掌握一个，了解另外一个。其中vue又是最简单的，一手资料都是中文的，在github上有很多的开源项目。 有何特点？ mvvm 组件化 模块化 应用场景 单页面应用（SPA，Single Page Application） 移动webapp 有哪些公司用了整个产品： 饿了么，早期是使用angularjs，然后使用vue.js进行重构的 掘金 滴滴打车 阿里的weex，基于vue的，目标就是实现接近原生的app开发 快速入门案例1.需要的基础：html+css+js2.最js的要求是比较高的，面向对象的思想。会涉及到es6，一些工具比如npm和webpack。 第一步，下载&lt;% asset_img one1-1.png image %&gt; 《————来自泰牛vue学习笔记》]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>vue.js</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[(一)VUe]]></title>
+    <url>%2F2017%2F09%2F23%2Fvue-one2%2F</url>
+    <content type="text"><![CDATA[## 《————来自泰牛vue学习笔记》]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>vue.js</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[page]]></title>
+    <url>%2F2017%2F09%2F23%2Fpage%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[模块化]]></title>
     <url>%2F2017%2F08%2F09%2F20170809-%E6%A8%A1%E5%9D%97%2F</url>
     <content type="text"><![CDATA[1.系统模块：http、querystring、url- Crypto 加密 - Events 事件 - Net 网络操作 - OS 操作系统信息 - Path 处理文件路径 - Stream 流操作 - Timers 定时器 - ZLIB 压缩 2.自定义模块- 引入自己的模块必须加./ - 对外输出东西——必须加给exports 12345678910//一个个的exports.xxx=??;exports.xxx=??;exports.xxx=??;//module用来输出一个集合module.exports=&#123; xxx:??, xxx:??, xxx:??&#125;; - 使用 - require——引入其他模块； require(./)； .js可以省略 - 1.如果有&quot;./&quot; 从当前目录找 - 2.如果没有&quot;./&quot; 先从系统模块,再从node_modules找 - exports——输出 - module——批量输出 3.包管理器 npm：NodeJS Package Manager(NodeJS包管理器) 1.统一下载途径 2.自动下载依赖 npm install xxx npm uninstall xxx node_modules——模块必须放在node_modules里面 ./ 不加./ 上传自己的模块 npm init npm publish npm –force unpublish]]></content>
