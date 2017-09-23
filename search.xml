@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[page]]></title>
-    <url>%2F2017%2F09%2F23%2Fpage%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[模块化]]></title>
     <url>%2F2017%2F08%2F09%2F20170809-%E6%A8%A1%E5%9D%97%2F</url>
     <content type="text"><![CDATA[1.系统模块：http、querystring、url- Crypto 加密 - Events 事件 - Net 网络操作 - OS 操作系统信息 - Path 处理文件路径 - Stream 流操作 - Timers 定时器 - ZLIB 压缩 2.自定义模块- 引入自己的模块必须加./ - 对外输出东西——必须加给exports 12345678910//一个个的exports.xxx=??;exports.xxx=??;exports.xxx=??;//module用来输出一个集合module.exports=&#123; xxx:??, xxx:??, xxx:??&#125;; - 使用 - require——引入其他模块； require(./)； .js可以省略 - 1.如果有&quot;./&quot; 从当前目录找 - 2.如果没有&quot;./&quot; 先从系统模块,再从node_modules找 - exports——输出 - module——批量输出 3.包管理器 npm：NodeJS Package Manager(NodeJS包管理器) 1.统一下载途径 2.自动下载依赖 npm install xxx npm uninstall xxx node_modules——模块必须放在node_modules里面 ./ 不加./ 上传自己的模块 npm init npm publish npm –force unpublish]]></content>
