@@ -103,7 +103,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="for of," />
+  <meta name="keywords" content="函数,属性,变量," />
 
 
 
@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="ES6 借鉴 C++、Java、C# 和 Python 语言，引入了for…of循环，作为遍历所有数据结构的统一的方法。   一个数据结构只要部署了Symbol.iterator属性，就被视为具有iterator接口，就可以用for…of循环遍历它的成员。也就是说，for…of循环内部调用的是数据结构的Symbol.iterator方法。 for…of循环可以使用的范围包括数组、Set 和 Ma">
-<meta name="keywords" content="for of">
+<meta name="description" content="优秀的人，不是不合群，而是他们合群的人里面没有你  javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器)">
+<meta name="keywords" content="函数,属性,变量">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6（for of）">
-<meta property="og:url" content="http://yoursite.com/2017/07/28/es6-for-of/index.html">
+<meta property="og:title" content="Javascript（简单讲解一）">
+<meta property="og:url" content="http://yoursite.com/2017/10/16/javascript-init/index.html">
 <meta property="og:site_name" content="zangruyan">
-<meta property="og:description" content="ES6 借鉴 C++、Java、C# 和 Python 语言，引入了for…of循环，作为遍历所有数据结构的统一的方法。   一个数据结构只要部署了Symbol.iterator属性，就被视为具有iterator接口，就可以用for…of循环遍历它的成员。也就是说，for…of循环内部调用的是数据结构的Symbol.iterator方法。 for…of循环可以使用的范围包括数组、Set 和 Ma">
+<meta property="og:description" content="优秀的人，不是不合群，而是他们合群的人里面没有你  javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-28T01:38:54.000Z">
+<meta property="og:updated_time" content="2017-10-16T06:28:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6（for of）">
-<meta name="twitter:description" content="ES6 借鉴 C++、Java、C# 和 Python 语言，引入了for…of循环，作为遍历所有数据结构的统一的方法。   一个数据结构只要部署了Symbol.iterator属性，就被视为具有iterator接口，就可以用for…of循环遍历它的成员。也就是说，for…of循环内部调用的是数据结构的Symbol.iterator方法。 for…of循环可以使用的范围包括数组、Set 和 Ma">
+<meta name="twitter:title" content="Javascript（简单讲解一）">
+<meta name="twitter:description" content="优秀的人，不是不合群，而是他们合群的人里面没有你  javascript(JS)的组成？ DOM 文档对象模型 BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好] ECMAScript 核心(翻译器)">
 
 
 
@@ -158,13 +158,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/28/es6-for-of/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/16/javascript-init/"/>
 
 
 
 
 
-  <title>ES6（for of） | zangruyan</title>
+  <title>Javascript（简单讲解一） | zangruyan</title>
   
 
 
@@ -337,7 +337,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/28/es6-for-of/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/16/javascript-init/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zangruyan">
@@ -354,7 +354,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ES6（for of）</h1>
+          <h1 class="post-title" itemprop="name headline">Javascript（简单讲解一）</h1>
         
 
         <div class="post-meta">
@@ -366,8 +366,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T09:38:54+08:00">
-                2017-07-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-16T14:28:03+08:00">
+                2017-10-16
               </time>
             
 
@@ -382,8 +382,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-28T09:38:54+08:00">
-                2017-07-28
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-16T14:28:03+08:00">
+                2017-10-16
               </time>
             
           </span>
@@ -412,8 +412,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web前端/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
+                  <a href="/categories/web前端/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -429,7 +429,7 @@
 
           
           
-             <span id="/2017/07/28/es6-for-of/" class="leancloud_visitors" data-flag-title="ES6（for of）">
+             <span id="/2017/10/16/javascript-init/" class="leancloud_visitors" data-flag-title="Javascript（简单讲解一）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -457,37 +457,198 @@
       
 
       
-        <blockquote>
-<p>ES6 借鉴 C++、Java、C# 和 Python 语言，引入了for…of循环，作为遍历所有数据结构的统一的方法。</p>
-</blockquote>
-<ul>
-<li>一个数据结构只要部署了<strong>Symbol.iterator</strong>属性，就被视为具有iterator接口，就可以用for…of循环遍历它的成员。也就是说，for…of循环内部调用的是数据结构的Symbol.iterator方法。</li>
-<li>for…of循环可以使用的范围包括数组、Set 和 Map 结构、某些类似数组的对象（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。<a id="more"></a></li>
-<li>arr.keys():用于for of对数组键名的遍历<ul>
-<li>语法：for(let index of arr.keys()){}</li>
-</ul>
-</li>
-<li>arr.values():用于for of 对数组键值的遍历<ul>
-<li>语法：for(let value of arr.values()){}</li>
-</ul>
-</li>
-<li>arr.entries():用于for of 对数组键值对的遍历<ul>
-<li>语法：for(let[index,ele]of arr.entries()){}</li>
-</ul>
-</li>
-</ul>
-<h3 id="回顾："><a href="#回顾：" class="headerlink" title="回顾："></a>回顾：</h3><ul>
-<li>for in 用来遍历对象的属性名。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</div><div class="line">for (var v in arr) &#123;</div><div class="line">    console.log(v);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="数组类似数组的对象，Set，Map"><a href="#数组类似数组的对象，Set，Map" class="headerlink" title="数组类似数组的对象，Set，Map"></a>数组类似数组的对象，Set，Map</h3><ul>
-<li><strong>数组</strong>原生具备iterator接口（即默认部署了Symbol.iterator属性），for…of循环本质上就是调用这个接口产生的遍历器。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</div><div class="line">for (var v of arr) &#123;</div><div class="line">    console.log(v);  //a,b,c</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="普通对象"><a href="#普通对象" class="headerlink" title="普通对象"></a>普通对象</h3><ul>
-<li>像var a = {‘a’,’b’}这种普通的对象，for…of结构不能直接使用，会报错，必须部署了 Iterator 接口后才能使用，那就要自己设置迭代器<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">// 当我们通过forof去迭代obj的时候，js内部会去查找并调用obj的Symbol.iterator的方法</div><div class="line">//obj[Symbol.iterator]() =&gt; iterator.next() =&gt; 根据返回的对象中的done值，来决定是否已经完成或继续调用next，如果done为真，表示迭代结束通过忽略这次value值，如果为false，表示当前value有效，并继续下一次迭代（next()）</div><div class="line">for (var v of obj) &#123;</div><div class="line">    console.log(v);</div><div class="line">&#125;</div><div class="line">for (var &#123;k,v&#125; of obj) &#123;</div><div class="line">  console.log(k,v);</div><div class="line">&#125;</div><div class="line"></div><div class="line">例如：自己写迭代器</div><div class="line">//如果我们希望一个对象能够被迭代，那么就需要去实现该对象的迭代协议和迭代器</div><div class="line">// 迭代协议</div><div class="line"></div><div class="line">var obj = &#123;x:10,y:20,z:100&#125;</div><div class="line">obj[Symbol.iterator] = function() &#123;</div><div class="line">    //let keys = [&apos;x&apos;, &apos;y&apos;];</div><div class="line">    let keys = Object.keys(obj);</div><div class="line">    let n = -1;</div><div class="line">    return &#123;</div><div class="line">        next() &#123;</div><div class="line">            if (n &lt; keys.length-1) &#123;</div><div class="line">                //return &#123;done: false, value: obj[keys[n++]]&#125;;</div><div class="line">                //return &#123;done: false, value: keys[n++]&#125;;</div><div class="line">                n++;</div><div class="line">                return &#123;done: false, value: &#123;</div><div class="line">                    k: keys[n],</div><div class="line">                    v: obj[keys[n]]</div><div class="line">                &#125;&#125;;</div><div class="line">            &#125; else &#123;</div><div class="line">                return &#123;done: true&#125;;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var objIterator = obj[Symbol.iterator]();</div><div class="line">//console.log(objIterator);</div><div class="line">console.log(objIterator.next());</div><div class="line">console.log(objIterator.next());</div><div class="line">console.log(objIterator.next());</div></pre></td></tr></table></figure></li>
-</ul>
+        <blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
 
+<h2 id="javascript-JS-的组成？"><a href="#javascript-JS-的组成？" class="headerlink" title="javascript(JS)的组成？"></a>javascript(JS)的组成？</h2><ul>
+<li>DOM 文档对象模型</li>
+<li>BOM 浏览器对象模型（滚动条之类） [没有标准，也就意味着兼容性不好]</li>
+<li>ECMAScript 核心(翻译器)<a id="more"></a>
+<h2 id="javascript-JS-在页面中处理了什么事情？"><a href="#javascript-JS-在页面中处理了什么事情？" class="headerlink" title="javascript(JS)在页面中处理了什么事情？"></a>javascript(JS)在页面中处理了什么事情？</h2></li>
+<li>特效交互</li>
+<li>数据交互</li>
+<li>逻辑操作</li>
+</ul>
+<h2 id="常见特效的原理"><a href="#常见特效的原理" class="headerlink" title="常见特效的原理"></a>常见特效的原理</h2><ul>
+<li>通过js修改元素的css样式，来操作元素的变化。</li>
+</ul>
+<h2 id="js可以写在那里？"><a href="#js可以写在那里？" class="headerlink" title="js可以写在那里？"></a>js可以写在那里？</h2><p>注意：行为(js)，样式（css），结构（html）三者分离</p>
+<ul>
+<li><p>写在标签内部，行间事件【不建议这样写，不容易实现分离】</p>
+<ul>
+<li>在标签上通过一些特殊属性，比如onclick，onmouseover等来实现行为的，并且这个行为和当前元素进行了绑定。  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!--行内js 作用于标签上面--&gt;</div><div class="line">&lt;button onclick=&quot;alert(123)&quot;&gt;按钮&lt;/button&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>写在页面内部专门的script标签中，当浏览器读到script的时候就会解析代码。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;but2&quot;&gt;按钮2&lt;/botton&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	document.getElementById(&quot;but2&quot;).onclick = function()&#123;</div><div class="line">		alert(&apos;就是这么绑定事件！&apos;);</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>写在外部调用，专门的js文件中【通过src引入】</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!--外链JS--&gt;</div><div class="line">&lt;script src=&quot;js/1.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><ul>
+<li>如果要获取的是个id，可以直接写元素的id名[存在浏览器兼容问题]</li>
+<li><p>document.getElementById(“idName”); 获取Id</p>
+<ul>
+<li>【单、双引号都可以，但是要成对存在】</li>
+<li>【翻译：在文档中 获取 元素 通过 ID】</li>
+<li>【获取该元素之前，请确保元素已经被解析了】</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    document.getElementById(&quot;but&quot;).onclick = function()&#123;</div><div class="line">    	document.getElementById(&quot;div1&quot;).style.width  = &quot;200px&quot;;</div><div class="line">    	document.getElementById(&quot;div1&quot;).style.height = &quot;200px&quot;;</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h2 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h2><ul>
+<li><p>属性的读操作(获取元素的属性值)</p>
+<ul>
+<li><p>clsss不叫class，叫className</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&apos;div&apos;).className;</div></pre></td></tr></table></figure>
+</li>
+<li><p>style 操作的是元素的行间样式</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;border:#f00 1px solid;&quot;&gt;&lt;div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    document.getElementById(&apos;div&apos;).style;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取src的时候获取到的是绝对路径</p>
+</li>
+<li><p>获取background这类符合样式的时候，火狐（firefox）下可以获取到符合样式中的所有样式而谷歌（chrom）下获取到的只是我们写了的样式</p>
+<ul>
+<li>eg:只设置了一个background:color。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:blue&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    /*</div><div class="line">    *火狐得到的是:blue none repeat scroll 0% 0%;</div><div class="line">    *谷歌得到的是：blue</div><div class="line">    */</div><div class="line">     document.getElementById(&apos;div&apos;).style.background;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>设置了十六进制颜色，但是获取的时候，获取到的是rgb颜色</p>
+<ul>
+<li>eg:background:#f60,得到的是rgb(255, 102, 0)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    /*</div><div class="line">    * 得到的是rgb(255, 102, 0)</div><div class="line">    */</div><div class="line">     document.getElementById(&apos;div&apos;).style.background;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>遇到“-”，删除“-”，首字母大写</p>
+<ul>
+<li>eg:background-color  =&gt; backgroundColor<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     document.getElementById(&apos;div&apos;).style.backgroundColor;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性的写操作(修改元素的属性值)</p>
+<p>  <strong>【注意： 在写left，width等样式时，一定注意加单位 】</strong></p>
+<ul>
+<li><p>把等号右侧的值赋给左侧</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var sum = 100;</div></pre></td></tr></table></figure>
+</li>
+<li><p>cssText获取<strong>style</strong>中所有的内容</p>
+<ul>
+<li>直接修改cssText会覆盖style中的所有内容，如果不想覆盖之前的所有内容，可以直接写style，或者用+=；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     var div = document.getElementById(&apos;div&apos;);</div><div class="line">     //这个时候style=&quot;color:#f00;&quot;</div><div class="line">     div.cssText = &quot;color:#f00;&quot;</div><div class="line">     //这个时候style=&quot;background:#f60;color:#f00;&quot;</div><div class="line">     div.cssText +=&quot;color:#f00;&quot;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>cssText = “” 可以直接清空所有的行间样式。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     var div = document.getElementById(&apos;div&apos;);</div><div class="line">     //这个时候style被清空</div><div class="line">     div.cssText = &quot;&quot;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>innerHTML 代表元素中的所有内容</p>
+<ul>
+<li>从元素的开标签到闭合标签之间的所有内容，包括元素中的子元素</li>
+<li>直接设置元素的innerHTML,或者替换掉之前的所有内容，如果不想替换只是添加内容用+=；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot;&gt;&lt;span&gt;aa&lt;/span&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     var div = document.getElementById(&apos;div&apos;);</div><div class="line"></div><div class="line">     //&lt;div id=&quot;div&quot;&gt;aaa&lt;/div&gt;</div><div class="line">     div.innerHTML = &quot;aaa&quot;</div><div class="line"></div><div class="line">     //&lt;div id=&quot;div&quot;&gt;&lt;span&gt;aa&lt;/span&gt;aaa&lt;/div&gt;</div><div class="line">     div.innerHTML += &quot;aaa&quot;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><ul>
+<li>一种数据格式，引号包起来的一串字符</li>
+</ul>
+<h2 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h2><ul>
+<li>一种数据类型，未定义</li>
+</ul>
+<h2 id="号运算符"><a href="#号运算符" class="headerlink" title="+号运算符"></a>+号运算符</h2><ul>
+<li>加法运算</li>
+<li>链接两个字符串</li>
+<li>+=（a += b  — a = a + b）</li>
+<li><p>加号有两个作用</p>
+<ul>
+<li>一个是加法运算</li>
+<li><p>一个是字符串链接：只有加号左右两侧是数字的情况才会执行加法运算，如果有一侧是字符串就会执行字符串链接，结果也是字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = &quot;哈哈哈&quot;;</div><div class="line">var b = 1000;</div><div class="line">console.log(a+b);//哈哈哈1000</div><div class="line">console.log(b+a);//1000哈哈哈</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>变量就相当于给数据起了一个简短的名字</li>
+<li>变量的作用：为了方便数据的复用和维护，我们通常用一个东西存放这类数据，我们就把它称为变量。</li>
+<li>变量声明<ul>
+<li>var 变量名 = 要存储的具体数据</li>
+</ul>
+</li>
+<li>变量命名：<ul>
+<li><ol>
+<li>以字母开始</li>
+</ol>
+</li>
+<li><ol>
+<li>变量在命名时最好带有含义</li>
+</ol>
+</li>
+<li><ol>
+<li>注意不能使用关键字和保留字</li>
+</ol>
+</li>
+<li><ol>
+<li>驼峰方式命名</li>
+</ol>
+</li>
+<li><ol>
+<li>不能以数字、特殊符号（除了$,_）开头</li>
+</ol>
+</li>
+<li><ol>
+<li>后续内容不能包含特殊符号（除了$,_）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;but&quot;&gt;按钮1&lt;/button&gt;</div><div class="line">&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var but1 = document.getElementById(&apos;but&apos;);</div><div class="line">	var div1 = document.getElementById(&apos;div1&apos;);</div><div class="line">	btn1.onclick = function()&#123;</div><div class="line">		div1.style.width = &quot;200px&quot;;</div><div class="line">		div1.style.height = &quot;200px&quot;;</div><div class="line">		div1.innerHTML = &quot;您好！&quot;；</div><div class="line">	&#125;</div><div class="line">&lt;/scirpt&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
+<li><p>有名字的函数<br>函数声明：<br>function name(){<br>  要执行的内容<br>}<br>调用:name();</p>
+</li>
+<li><p>匿名函数【不能直接使用，只能使用在事件中】</p>
+<ul>
+<li>eg:btn1.onclick = function{要执行的内容}</li>
+</ul>
+</li>
+<li><p>函数调用：把函数执行一遍</p>
+<ul>
+<li>事件调用 btn.onclick = name;[注意不加括号]</li>
+<li><p>非事件调用：添加括号</p>
+<p>【*注意：btn.onclick = name(); 只会直接执行一次，当点击btn的时候就不执行了；】</p>
+<p>【*注意：btn.onclick = function(){name()}; 不直接执行，当点击btn的时候执行；】</p>
+</li>
+</ul>
+</li>
+<li><p>什么时候加括号，什么时候不加括号？</p>
+<ul>
+<li>1.当浏览器直接读到这行代码的时候，就执行需要给函数调用加（）；</li>
+<li>2.当某种特定的条件下才执行，不需要加（）；</li>
+</ul>
+</li>
+</ul>
+<h2 id="window和window-onload"><a href="#window和window-onload" class="headerlink" title="window和window.onload"></a>window和window.onload</h2><ul>
+<li>onload事件 加载完成</li>
+</ul>
+<h2 id="onmouseover和onmouseout"><a href="#onmouseover和onmouseout" class="headerlink" title="onmouseover和onmouseout"></a>onmouseover和onmouseout</h2><blockquote>
+<p>鼠标移入和移出</p>
+</blockquote>
+<h2 id="调试工具："><a href="#调试工具：" class="headerlink" title="调试工具："></a>调试工具：</h2><ul>
+<li>alert()【弹出对话框，接受的是一个字符串】</li>
+<li>console.log【打印控制台】</li>
+</ul>
+<ul>
+<li>控制台</li>
+<li>F12，或者右键-&gt;审查元素方式可以打开调试工具</li>
+<li>选择：console</li>
+<li>可以通过console进行数据输出，分析，代码调试</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;btn&quot;&gt;按钮1&lt;/button&gt;</div><div class="line">&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var div1 = document.getElementById(&apos;div1&apos;);</div><div class="line">	var div1 = document.getElementById(&apos;div1&apos;);</div><div class="line">	btn1.onclick = function()&#123;</div><div class="line">		//把信息以日志方式打印到控制台中</div><div class="line">		console.log(&quot;你好&quot;);</div><div class="line">		//打印数据信息结构</div><div class="line">		console.dir(div1);</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -500,12 +661,12 @@
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2017/07/28/es6-for-of/">ES6（for of）</a></p>
+  <p><span>本文标题:</span><a href="/2017/10/16/javascript-init/">Javascript（简单讲解一）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zangruyan 的个人博客">zangruyan</a></p>
-  <p><span>发布时间:</span>2017年07月28日 - 09:07</p>
-  <p><span>最后更新:</span>2017年07月28日 - 09:07</p>
-  <p><span>原始链接:</span><a href="/2017/07/28/es6-for-of/" title="ES6（for of）">http://yoursite.com/2017/07/28/es6-for-of/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2017/07/28/es6-for-of/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2017年10月16日 - 14:10</p>
+  <p><span>最后更新:</span>2017年10月16日 - 14:10</p>
+  <p><span>原始链接:</span><a href="/2017/10/16/javascript-init/" title="Javascript（简单讲解一）">http://yoursite.com/2017/10/16/javascript-init/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2017/10/16/javascript-init/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i>转载请保留原文链接及作者。</p>
 </div>
@@ -575,7 +736,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/for-of/" rel="tag"><i class="fa fa-tag"></i> for of</a>
+            <a href="/tags/函数/" rel="tag"><i class="fa fa-tag"></i> 函数</a>
+          
+            <a href="/tags/属性/" rel="tag"><i class="fa fa-tag"></i> 属性</a>
+          
+            <a href="/tags/变量/" rel="tag"><i class="fa fa-tag"></i> 变量</a>
           
         </div>
       
@@ -588,8 +753,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/27/es6-let-const-Destructuring-assignment/" rel="next" title="ES6（变量、常量、解构赋值）">
-                <i class="fa fa-chevron-left"></i> ES6（变量、常量、解构赋值）
+              <a href="/2017/08/09/20170809-模块/" rel="next" title="模块化">
+                <i class="fa fa-chevron-left"></i> 模块化
               </a>
             
           </div>
@@ -598,8 +763,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/28/es6-array-extension/" rel="prev" title="ES6（数组扩展）">
-                ES6（数组扩展） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/17/javascript-1/" rel="prev" title="Javascript（简单讲解二）">
+                Javascript（简单讲解二） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -762,7 +927,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#回顾："><span class="nav-number">1.</span> <span class="nav-text">回顾：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组类似数组的对象，Set，Map"><span class="nav-number">2.</span> <span class="nav-text">数组类似数组的对象，Set，Map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#普通对象"><span class="nav-number">3.</span> <span class="nav-text">普通对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-JS-的组成？"><span class="nav-number">1.</span> <span class="nav-text">javascript(JS)的组成？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-JS-在页面中处理了什么事情？"><span class="nav-number">2.</span> <span class="nav-text">javascript(JS)在页面中处理了什么事情？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见特效的原理"><span class="nav-number">3.</span> <span class="nav-text">常见特效的原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js可以写在那里？"><span class="nav-number">4.</span> <span class="nav-text">js可以写在那里？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取元素"><span class="nav-number">5.</span> <span class="nav-text">获取元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性操作"><span class="nav-number">6.</span> <span class="nav-text">属性操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串"><span class="nav-number">7.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">undefined</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#号运算符"><span class="nav-number">9.</span> <span class="nav-text">+号运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">10.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">11.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#window和window-onload"><span class="nav-number">12.</span> <span class="nav-text">window和window.onload</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#onmouseover和onmouseout"><span class="nav-number">13.</span> <span class="nav-text">onmouseover和onmouseout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试工具："><span class="nav-number">14.</span> <span class="nav-text">调试工具：</span></a></li></ol></div>
             
 
           </div>
