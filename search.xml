@@ -2,16 +2,59 @@
 <search>
   <entry>
     <title><![CDATA[Javascript（简单讲解二）]]></title>
-    <url>%2F2017%2F10%2F17%2Fjavascript-1%2F</url>
+    <url>%2F2017%2F10%2F24%2Fjavascript-1%2F</url>
     <content type="text"><![CDATA[元素获取的其他方法 1.document.querySelector(‘Css Selector’); 接收一个css选择器（通配，群组，包含，id，类…等等 【注意：如果这个选择器对应的是一组元素，就只找到第0个。】 123var box = document.querySelector(&apos;.box&apos;);//第一个var box = document.querySelector(&apos;.box:last-of-type&apos;);//最后一个box.style.background = &quot;red&quot;; 2.父级.querySelectorAll(‘Css选择器’); 获取元素下某个类型的标签 获取结果是一种元素 【注意：一组元素不能在js直接操作,需要添加下标】 3.父级.getElementsByTagName(‘标签名’); 获取元素下某个类型的标签 获取结果是一种元素 4.document.getElementsClassName(‘Class名’); 获取元素下某个类型的标签 获取结果是一种元素 解：一组元素（元素集合，类数组） 一组元素不能直接操作 一组元素哪怕只有一个，它也是一组元素。 一组元素在操作的时候，可以使用下标。 如果需要知道这组元素有几个，可以使用 length属性 if语法 一种操作下会有两种或者以上的执行结果，记得用判断。 123456789101112131415161718if(条件)&#123; 条件成立的时候需要执行的代码&#125;if(条件)&#123; 条件成立的时候需要执行的代码&#125;else&#123; 条件不成立的时候需要执行代码&#125;if(条件一)&#123; 条件一成立的时候需要执行的代码&#125;else if(条件二)&#123; 条件二成立的时候需要执行的代码&#125;....else&#123; 以上条件都不成立的时候执行的代码&#125; 【style提取的是行间样式，所以不建议大家直接使用style里的内容当作判断条件】 运算符 逻辑运算符 “==” 等于 “!=” 不等于 “&gt;=” 大于等于 “&lt;=” 小于等于 “&lt;” 小于 “&lt;” 大于 数据类型为了能够更方便的描述和使用，程序通常会把要操作的数据，根据其特性，分成不同的类型进行操作。在javascript中，数据一共可以分成如下七种类型： 简单类型（值） 1234567891011121314151617181920211. Number 由0-9组成的值，还有几个比较特殊的值 a. NaN -&gt;Not a Number b. Infinity-&gt; 无穷的2. String 由一对单引号或双引号包含的内容【单引号双引号需要成对】3. Booleans 用来描述逻辑的真假的，这种类型有且仅有两个值 a. true 表示真 b. false 表示假 【js严格比较大小写字母】 var a = true; a = !a;//a = false; var a = false; a = !a;//a = true;4. Null 用来描述空值，这种类型有且仅有一个值【注意：当我们使用typeof的时候，返回的是‘object’】5. Undefined 用来描述不存在的值，这种类型有且仅有一个值6. Symbol7. function()&#123;&#125; function函数 复杂类型（复合类型、引用类型） object：由7种数据类型组合的类型，object中包含7种类型中的任意类型。 for循环 var i = 0; i &lt; li.length; 执行里面的操作; i++; 易混解析：1234567891011for(var i = 0; i &lt; li.length; i++)&#123; //循环在页面加载完成之后就执行了 li[i].onclick = function()&#123; /* *点击li时执行 *这会循环肯定已经执行完了， *所以在获取i的时候，是循环执行完之后的结果 */ alert(i); &#125;&#125; this 在事件函数中this代表触发当前事件的元素 1234567for(var i = 0; i &lt; li.length; i++) &#123; li[i].onclick = function()&#123; console.log(this,this.innerHTML); //结果是&lt;span&gt;1111&lt;/span&gt; 1111 // 在事件函数中，this代表触发当前事件的元素 &#125;;&#125;]]></content>
       <categories>
         <category>web前端</category>
         <category>javascript</category>
       </categories>
       <tags>
+        <tag>元素获取</tag>
+        <tag>if</tag>
+        <tag>for</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-6]]></title>
+    <url>%2F2017%2F10%2F17%2Fjavascript-6%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Javascript（五 - for循环）]]></title>
+    <url>%2F2017%2F10%2F17%2Fjavascript-5%2F</url>
+    <content type="text"><![CDATA[for循环 什么时候使用for循环？ 当我们需要同时处理一组数据得时候，就需要使用循环 需要什么？ 起始值 判断条件 执行语句 自增 写法： 123456789for(var i = 0;i&lt;10;i++)&#123; console.log(i);&#125;var i = 0;//i是一个数字变量,循环变量for(i;i&lt;5;i++)&#123; console.log(i);&#125; 当变量的判断条件永远成立得时候，这个循环就会变成一个死循环。 循环变量在for循环结束之后一样调用，不过调用得值是for循环不符合条件之后得值。 当判断条件不成立时，循环就结束了。 this 在事件函数中this代表触发当前事件的元素。 在所有非事件函数中this指向window。 谁调用这个函数，this就指向谁。 函数执行的时候都属于window调用 思路解析 点击当前div，删除其他div的颜色，给当前点击元素换背景。 1.全部清空法： 1当我们在事件中需要知道当前事件的这个元素是一组中的第几个的时候，添加索引值。 2.索引 V字形生成思路 123456789101.获取外面的盒子2.点击事件3.生成五个div4.写变量l,t,w,h,5.判断他是先自增还是先自减6.设置dis值是正负7.判断拐点。9.inner+= 赋值10.innerHTML 赋值。11.设置top和left值。]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>for</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Javascript（四 - 运算符）]]></title>
+    <url>%2F2017%2F10%2F17%2Fjavascript-4%2F</url>
+    <content type="text"><![CDATA[运算符 “+”：可以用作连接符，因此当进行加减运算的时候要确保是两个数字类型。 转换方法：可以用*，-，／任何一种运算符进行自动转换。 “-” “*” “÷” 在js中动态添加元素样式的两种方式 行间样式。 给style标签添加innerHTML(但是有优先级的关系) for循环解析：十行十列 先循环十行 再循环十列 i循环执行一次，j循环执行十次。 1234567 for(var i = 0; i &lt; 10; i++)&#123; console.log(&apos;这是第&apos;+i+&apos;行&apos;); // i循序执行一次 j循环会执行10次 for(var j = 0; j &lt; 10; j++) &#123; console.log(&apos;这是第&apos;+j+&apos;列&apos;); &#125;&#125; 计算top值：当前是第n行，n行高 计算left值：当前是第n行，n列高 计算当前是第几个：行数*每行的个数得出这行之前有多少？]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>javascript</category>
+      </categories>
+      <tags>
         <tag>函数</tag>
-        <tag>属性</tag>
-        <tag>变量</tag>
+        <tag>for</tag>
+        <tag>运算符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Javascript（简单讲解三 - 数组）]]></title>
+    <url>%2F2017%2F10%2F17%2Fjavascript-3%2F</url>
+    <content type="text"><![CDATA[数组 数组[] Array是一种数据格式。 数组中，每个数据之间用“,”隔开。 获取数组中的其中一位，需要用下标。 数组的长度 length。 数组中可以存放任意类型的数据,但是一般为了代码的可读性极维护性，我每一个数组中，只存放一种类型的数据。 当判断不大于这个数组的时候可以两种方式。 i&gt;=arr.length-1; i&gt;arr.length123var = [123,&quot;abc&quot;,true,document,function()&#123;&#125;,,&quot;&quot;,[]];console.log(arr[5]); //undefined;console.log(arr.length);//8 练习和作业详细分析： 布局 获取元素，定义变量，定义数组 循环切换和顺序切换的按钮 1.点击切换下面的文字说明。 2.点击加className,去掉另一个的className 循环切换 1.点击左边箭头控制数字一直减，到0的时候回到5. 2.点击右边尖头控制数字一直加，到最大的时候回到0. 3.上面的1/4修改值 4.切换文字描述4.顺序切换 1.点击左边箭头控制数字一直减，到0的时候弹出提示，并且下面的不能点击. 2.点击右边尖头控制数字一直加，到最大的时候弹出提示，并且下面的不能点击. 3.上面的1/4修改值 4.切换文字描述123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202203204205206207208209210211212213214215216217218219220221222223224225226227228229230231232233234235236237238239240241242243244245246247248249250251252253254255256257258259260261262263264265266267268269&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;Title&lt;/title&gt; &lt;style&gt; body&#123; font-family: Arial; &#125; p&#123; margin: 20px 0; padding:0; &#125; input&#123; outline: none; &#125; .wrap&#123; position: relative; width:550px; margin:50px auto 0; &#125; .tab&#123; width:550px; margin:0 auto; text-align: center; background-color: #000; padding:20px 0; &#125; .tab div&#123; width:164px; margin:0 auto; &#125; .tab div::after&#123; content:&quot;.&quot;; display:block; height:0; clear:both; &#125; .tab input&#123; display: inline-block; border-radius: 3px; width: 80px; line-height:20px; margin-left:-1px; border:#fff 1px solid; background: #000; color:#fff; float: left; cursor: pointer; &#125; .tab input.cur&#123; background: #fff; color:#000; &#125; .tab p&#123; color:#ccc; font-size: 13px; &#125; .box&#123; margin: 0 auto; width: 550px; height: 310px; position: relative; &#125; .box input&#123; position: absolute; top: 50%; margin-top:-25px; width: 40px; height: 50px; border: 0; background: none; color:#fff; font-size: 26px; &#125; .box input:hover&#123; background-color: rgba(0,0,0,.4); cursor: pointer; &#125; .box input:nth-of-type(1)&#123; left: 0; &#125; .box input:nth-of-type(2)&#123; right:0; &#125; .box nav&#123; position: absolute; left:0; bottom:0; width:100%; line-height:40px; color: #fff; text-align: center; background-color: rgba(0,0,0,.3); &#125; .box span&#123; position: absolute; width:100%; line-height:45px; text-align: center; top:0; color: #fff; &#125; .mask&#123; position: absolute; display: none; top:0; left:0; width:100%; height:100%; background-color: rgba(255,255,255,0); z-index: 99; &#125; .fixed&#123; width: 300px; height:150px; position: absolute; left:50%; margin-left: -150px; top:50%; margin-top: -75px; background-color:rgba(0,0,0,.8); color:#fff; text-align: center; &#125; .fixed p:nth-of-type(2)&#123; font-size: 12px; &#125; .fixed a&#123; text-decoration: none; color:#fff; font-size: 12px; &#125; .fixed a:nth-of-type(1)&#123; border:#fff 1px solid; padding:5px 15px; &#125; .fixed a:nth-of-type(2)&#123; position: absolute; right:10px; top:10px; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;wrap&quot;&gt; &lt;div class=&quot;tab&quot;&gt; &lt;div&gt; &lt;input type=&quot;button&quot; value=&quot;循环切换&quot; class=&quot;cur&quot;&gt; &lt;input type=&quot;button&quot; value=&quot;顺序切换&quot;&gt; &lt;/div&gt; &lt;p&gt;图片可以从最后一张转到第一张循环&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;box&quot;&gt; &lt;span&gt;1/4&lt;/span&gt; &lt;input type=&quot;button&quot; value=&quot;&lt;&quot;&gt; &lt;img src=&quot;img/1.jpg&quot; /&gt; &lt;input type=&quot;button&quot; value=&quot;&gt;&quot;&gt; &lt;nav&gt;文字描述一&lt;/nav&gt; &lt;/div&gt; &lt;div class=&quot;mask&quot;&gt; &lt;div class=&quot;fixed&quot;&gt; &lt;p&gt;Javascript 提醒&lt;/p&gt; &lt;p&gt;已经到第一张啦～&lt;/p&gt; &lt;a href=&quot;javascript:&quot;&gt;确定&lt;/a&gt; &lt;a href=&quot;javascript:&quot;&gt;X&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;&lt;/div&gt;&lt;script&gt; //获取控制循环和顺序的元素 var tab = document.querySelector(&apos;.tab&apos;); var tabP = tab.querySelector(&apos;p&apos;); var tabs = tab.querySelectorAll(&apos;input&apos;); //获取要进行修改处理的元素 var box = document.querySelector(&apos;.box&apos;); var inputs = box.querySelectorAll(&apos;input&apos;); var span = box.querySelector(&apos;span&apos;); var img = box.querySelector(&apos;img&apos;); var navText = box.querySelector(&apos;nav&apos;); //弹出提示框 var mask = document.querySelector(&apos;.mask&apos;); var fixed = document.querySelector(&apos;.fixed&apos;); var fText = fixed.querySelectorAll(&apos;p&apos;)[1]; var fSure = fixed.querySelectorAll(&apos;a&apos;); //创建数组 var arrImg = [&apos;img/1.jpg&apos;,&apos;img/2.jpg&apos;,&apos;img/3.jpg&apos;,&apos;img/4.jpg&apos;]; var arrImgText = [&apos;文字描述一&apos;,&apos;文字描述二&apos;,&apos;文字描述三&apos;,&apos;文字描述四&apos;]; var arrText = [&apos;图片可以从最后一张转到第一张循环&apos;,&apos;图片只能到第一张或者最后一张&apos;]; var srcNum = 0,max = arrImg.length-1,min = 0,isIn = true; tabs[0].onclick = function() &#123; isIn = true; toFunText(); &#125; tabs[1].onclick = function() &#123; isIn = false; toFunText(); &#125; //切换按钮的样式和文字变换 function toFunText()&#123; if(isIn)&#123; tabP.innerHTML = arrText[0]; tabs[0].className = &apos;cur&apos;; tabs[1].className = &apos;&apos;; &#125;else&#123; tabP.innerHTML = arrText[1]; tabs[1].className = &apos;cur&apos;; tabs[0].className = &apos;&apos;; &#125; &#125; //上一张 inputs[0].onclick = function()&#123; srcNum-- ; if(srcNum&lt;min)&#123; if(isIn)&#123; srcNum = max;//循环 &#125;else&#123; srcNum = min; //alert(&apos;这是第一张&apos;); fText.innerHTML = &apos;已经是第一张了哦～&apos;; mask.style.display = &apos;block&apos;; &#125; &#125; img.src = arrImg[srcNum]; navText.innerHTML = arrImgText[srcNum]; span.innerHTML =(srcNum+1)+&apos;/&apos;+arrImg.length; &#125; //下一张 inputs[1].onclick = function()&#123; srcNum++ ; if(srcNum&gt;max)&#123; if(isIn)&#123; srcNum = min;//循环 &#125;else&#123; srcNum = max; fText.innerHTML = &apos;已经是最后一张了哦～&apos;; mask.style.display = &apos;block&apos;; //alert(&apos;这是最后一张&apos;) &#125; &#125; img.src = arrImg[srcNum]; navText.innerHTML = arrImgText[srcNum]; span.innerHTML =(srcNum+1)+&apos;/&apos;+arrImg.length; &#125; //点击关闭提示弹框 fSure[0].onclick=function()&#123; closeFun(); &#125; fSure[1].onclick=function()&#123; closeFun(); &#125; function closeFun()&#123; mask.style.display = &apos;none&apos;; &#125;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
