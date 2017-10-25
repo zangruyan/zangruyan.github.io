@@ -368,7 +368,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-25T09:44:47+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-25T09:49:46+08:00">
                 2017-10-25
               </time>
             
@@ -384,7 +384,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-10-25T09:44:47+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-25T09:49:46+08:00">
                 2017-10-25
               </time>
             
@@ -460,8 +460,7 @@
 
       
         
-          
-            <h3 id="1-获取元素的方法"><a href="#1-获取元素的方法" class="headerlink" title="1.获取元素的方法"></a>1.获取元素的方法</h3><ul>
+          <h3 id="1-获取元素的方法"><a href="#1-获取元素的方法" class="headerlink" title="1.获取元素的方法"></a>1.获取元素的方法</h3><ul>
 <li>获取单个元素：<ul>
 <li>document.getElementById(‘idName’);//只能从document获取</li>
 <li>document.querySelector(‘cssSelector’);//可以从父级获取</li>
@@ -473,180 +472,14 @@
 <li>document.getElementsByClassName(‘className’);</li>
 <li>query和get方法的区别：<ul>
 <li>query方法只会在声明的时候，获取一次。</li>
-<li>get方法每次使用的时候，都会获取一次。<h3 id="2-事件"><a href="#2-事件" class="headerlink" title="2.事件"></a>2.事件</h3></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>onload：加载完成之后（只有window、body能加onload事件）</li>
-<li>onclick：点击事件</li>
-<li>onmonuseover 鼠标移入</li>
-<li>onmouseout 鼠标移除</li>
-</ul>
-<h3 id="3-变量"><a href="#3-变量" class="headerlink" title="3.变量"></a>3.变量</h3><ul>
-<li>用来存储数据的一种方式（存值、存址）。</li>
-<li>变量声明：var 变量名 = 要存储的具体数据</li>
-<li>规则：在那个函数中声明的变量，就只能在这个函数中使用。</li>
-</ul>
-<h3 id="4-变量命名"><a href="#4-变量命名" class="headerlink" title="4.变量命名"></a>4.变量命名</h3><ol>
-<li>可以使用字母、数字、$、_。</li>
-<li>变量名不能以数字开头</li>
-<li>驼峰命名：从第二个单词开始首字母大写</li>
-<li>常量命名：字母全部大些，每个单词中间用“_”隔开</li>
-<li>注意关键字和保留字不能用于变量名</li>
-</ol>
-<h3 id="5-函数"><a href="#5-函数" class="headerlink" title="5.函数"></a>5.函数</h3><ul>
-<li>匿名函数：没有名字的函数function(){};</li>
-<li>有名字的函数：<br>  函数声明：function name(){ //执行语句 }</li>
-<li>函数调用：<ul>
-<li>事件调用：<ul>
-<li>el.onclick = name;</li>
-<li>el.onclick = function(){}</li>
-</ul>
-</li>
-<li>直接调用<ul>
-<li>name();</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="6-属性操作"><a href="#6-属性操作" class="headerlink" title="6.属性操作"></a>6.属性操作</h3><ul>
-<li><p>属性的读操作</p>
-<ul>
-<li>属性读操作(获取属性值):obj.属性名</li>
-<li>属性写操作(获取修改属性值):obj.属性名 = 属性值；</li>
-<li><p>注意问题：</p>
-<ul>
-<li><p>1.clsss不叫class，叫className</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&apos;div&apos;).className;</div></pre></td></tr></table></figure>
-</li>
-<li><p>2.style 操作的是元素的行间样式</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;border:#f00 1px solid;&quot;&gt;&lt;div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    document.getElementById(&apos;div&apos;).style;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>3.获取src的时候获取到的是绝对路径</p>
-</li>
-<li><p>4.获取background这类符合样式的时候，火狐（firefox）下可以获取到符合样式中的所有样式而谷歌（chrom）下获取到的只是我们写了的样式</p>
-<ul>
-<li>eg:只设置了一个background:color。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:blue&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    /*</div><div class="line">    *火狐得到的是:blue none repeat scroll 0% 0%;</div><div class="line">    *谷歌得到的是：blue</div><div class="line">    */</div><div class="line">     document.getElementById(&apos;div&apos;).style.background;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>5.设置了十六进制颜色，但是获取的时候，获取到的是rgb颜色</p>
-<ul>
-<li>eg:background:#f60,得到的是rgb(255, 102, 0)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    /*</div><div class="line">    * 得到的是rgb(255, 102, 0)</div><div class="line">    */</div><div class="line">     document.getElementById(&apos;div&apos;).style.background;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>6.遇到“-”，删除“-”，首字母大写</p>
-<ul>
-<li>eg:background-color  =&gt; backgroundColor<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     document.getElementById(&apos;div&apos;).style.backgroundColor;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>7.把等号右侧的值赋给左侧</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var sum = 100;</div></pre></td></tr></table></figure>
-</li>
-<li><p>8.cssText获取<strong>style</strong>中所有的内容</p>
-<ul>
-<li>直接修改cssText会覆盖style中的所有内容，如果不想覆盖之前的所有内容，可以直接写style，或者用+=；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     var div = document.getElementById(&apos;div&apos;);</div><div class="line">     //这个时候style=&quot;color:#f00;&quot;</div><div class="line">     div.cssText = &quot;color:#f00;&quot;</div><div class="line">     //这个时候style=&quot;background:#f60;color:#f00;&quot;</div><div class="line">     div.cssText +=&quot;color:#f00;&quot;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>9.cssText = “” 可以直接清空所有的行间样式。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot; style=&quot;background:#f60;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     var div = document.getElementById(&apos;div&apos;);</div><div class="line">     //这个时候style被清空</div><div class="line">     div.cssText = &quot;&quot;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>10.innerHTML 代表元素中的所有内容</p>
-<ul>
-<li>从元素的开标签到闭合标签之间的所有内容，包括元素中的子元素</li>
-<li>直接设置元素的innerHTML,或者替换掉之前的所有内容，如果不想替换只是添加内容用+=；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div&quot;&gt;&lt;span&gt;aa&lt;/span&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">     var div = document.getElementById(&apos;div&apos;);</div><div class="line"></div><div class="line">     //&lt;div id=&quot;div&quot;&gt;aaa&lt;/div&gt;</div><div class="line">     div.innerHTML = &quot;aaa&quot;</div><div class="line"></div><div class="line">     //&lt;div id=&quot;div&quot;&gt;&lt;span&gt;aa&lt;/span&gt;aaa&lt;/div&gt;</div><div class="line">     div.innerHTML += &quot;aaa&quot;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>11.在写left，width等样式时，一定注意加单位</p>
-</li>
-<li>可以给元素设置它本身不具备的属性，这个叫自定义属性。</li>
-</ul>
-</li>
-<li>自定义属性：<ul>
-<li>1.对象本身不具备的属性（不是标准中规定的属性，而是我们自己设置的）</li>
-<li>2.索引中：在实践中，需要知道当前元素是一组元素中第几个的时候，需要使用索引值。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><ul>
-<li><p>扩展：</p>
-<ul>
-<li>字符串：引号包起来的一串自负</li>
-<li>布尔值：true 和 false</li>
-<li><p>运算符：</p>
-<ul>
-<li>1.“+”：</li>
-</ul>
-<ol>
-<li>如果加号左右两边是数字，执行加法运算。</li>
-<li>如果一遍是字符串，执行字符串链接。</li>
-</ol>
-<ul>
-<li>2.执行数字运算：“*,/,-,%,–,-=,++,+=”</li>
-<li>3.逻辑运算符，返回的结果是布尔值：&gt;,==,&lt;,&gt;=,&lt;=,!=;</li>
-</ul>
-</li>
-<li>4.!非（否） 布尔值中取反</li>
-</ul>
-</li>
-<li><p>语法:</p>
-<blockquote>
-<p>同一个位置，需要两种或两种以上的执行结果，用判断。</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">   if(布尔值)&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">if(布尔值) &#123;//布尔值为true执行if，为false接着向下执行</div><div class="line"></div><div class="line">&#125;else if(布尔值) &#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">if(布尔值) &#123;</div><div class="line"></div><div class="line">&#125; else if(布尔值) &#123;</div><div class="line"></div><div class="line">&#125; else &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="for循环："><a href="#for循环：" class="headerlink" title="for循环："></a>for循环：</h3><blockquote>
-<p>当我们需要同时操作一组元素，或者一组数据的时候需要用到循环。</p>
-<ol>
-<li>初始值：var i = 0;</li>
-<li>判断条件：i &lt; li.length;</li>
-<li>执行语句：执行里面面的操作;</li>
-<li>自增：i++;</li>
-</ol>
-</blockquote>
-<pre><code>执行顺序：1，2，3，4
-
-for(初始值;判断条件;自增){
-    //执行语句
-}
-</code></pre><h3 id="数组："><a href="#数组：" class="headerlink" title="数组："></a>数组：</h3><ul>
-<li>用来存储一组数据</li>
-<li>格式[data1,data2,data3]</li>
-<li>每一个数据之间用，隔开</li>
-<li>一组数据不能直接操作，要操作一位需要使用下标。</li>
-<li>需要使用下标</li>
-<li>可以从数组length获取到数组中存储多少位数据。</li>
-</ul>
-<h3 id="this："><a href="#this：" class="headerlink" title="this："></a>this：</h3><ol>
-<li>事件函数中</li>
-<li>this指向，触发当前事件的元素</li>
-<li>目前的非事件函数，this指向window</li>
-</ol>
-<h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><ol>
-<li>定点清除<ul>
-<li>1.先清楚选中的元素的样式。</li>
-<li>2.给当前的元素加上选中样式。</li>
-<li>3.定义个变量记录之前选中的元素和当前选中的元素。</li>
-</ul>
-</li>
-<li>自定义属性</li>
-<li>大清洗<ul>
-<li>1.先清除所有元素的选中样式</li>
-<li>2.给当前的加上选中样式</li>
-</ul>
-</li>
-</ol>
-
-          
+<li>get方法每次使用的时候，都会获取一次。</li></ul></li></ul></li></ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/25/javascript-7/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
