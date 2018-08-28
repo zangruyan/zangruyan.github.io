@@ -13,6 +13,30 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[margin常见问题]]></title>
+    <url>%2F2018%2F08%2F28%2Fcss-margin%2F</url>
+    <content type="text"><![CDATA[块状元素在垂直方向上有重叠现象 父元素和第一个子元素的margin-top出现重叠。如下:原因是：此时div的margin-top是自动的，由于这种情况下，它们会现margin-top重叠的情况，所以父元素与子元素之间，取margin-top大的那个值为准。如下，也会以50px为准。解决方案：给父元素加border给父元素加padding 兄弟之间在垂直方向margin重合：一样，取相邻的margin值大的那个。由于这里margin是相等，所以表现出来就是完全重合的。]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[清除浮动float]]></title>
+    <url>%2F2018%2F08%2F27%2Fcss-float%2F</url>
+    <content type="text"><![CDATA[清除浮动带来的影响 为什么要清除影响?原因它会破坏标准的文档流。 方法一：给父元素加高度如下代码，是一个常见的网页结构：由于ul中的三个li都浮动，这个浮动产生的破坏性，会沿续到.main的身上。所以p标签中的内容就去填空这个浮动产生的空缺。由于“半脱离”的特性，文字不能填到三个菜单的下方，而是在它们的后面摆放。 解决方法是给ul加高度： 方法二：给父元素设置Overflow:hidden此时，不给父级元素明确的高度，而是设置overflow属性。 样式如下： 结构如下：效果如下： 原理：overflow:hidden。效果是如果元素的内容超出了它的尺寸，就会把超出的部分隐藏。这里达到清除浮动的影响的效果，原因是：既然是要超出部分隐藏。我们没有给父元素设置高度，为了比较父元素的高度和内容的高度，就要先算出父元素的高度，所以它就要考虑父元素当中所有子元素的高度，它就会引起浏览器的“重绘”的操作，这个操作就会纠正浮动引起的父元素高度塌陷的问题。 Overflow属性指定如果内容溢出一个元素的框，会发生什么。默认值：visible。可见的。默认效果如下： 取值：visible 默认值。内容不会被修剪，会呈现在元素框之外。hidden 内容会被修剪，并且其余内容是不可见的。scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容 设置hidden后： 设置为scroll后： 方法三：用clear:both清除浮动元素的影响：clear让自己不受上一个浮动元素的影响取值：None | right |left |both 作用：clear 属性规定元素的哪一侧不允许浮动元素。 如：.div{clear:left}.div元素很有个性：它不允许它的左边出现左浮动的元素。如果出现了，自己换行。改变自己，遵守它的规则。 示例：改变自己。建议使用:clear:both; 实际操作如下：这里有一个问题：我们会多出一个完全没有意义的div，我们只是利用它来清除它前面的元素由于浮动而产生的影响。 程序员为了少写这一句，利用css3伪元素after。给父元素添加一个类：12.clearfix:after&#123;content:””;display:block;height:0;overflow:hidden;clear:both;&#125;.clearfix&#123;*zoom:1&#125;; /*照顾ie浏览器低版本&lt;ie8的感受，达到类似的效果*/]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[nvm 重启终端失效的解决方法]]></title>
     <url>%2F2018%2F08%2F16%2F20170801-nvm-restart-failure%2F</url>
     <content type="text"><![CDATA[brew安装 我们需要按照上面提供的方法,首先在用户更目录下 创建 .nvm 文件,在终端中输入 mkdir ~/.nvm 然后去编辑你的 bash 配置文件 $HOME/.bashrc ,如果你使用 zsh 那么编辑 $HOME/.zshrc 配置文件,分别是 nano ~/.bashrc 与 nano ~/.zshrc 把下面的内容粘贴进去 通过 brew install nvm 来安装的nvm粘贴此段 export NVM_DIR=~/.nvm 与 source $(brew –prefix nvm)/nvm.sh 最后让你的 shell 配置及时生效,分别是 source ~/.bashrc 与 source ~/.zshrc curl安装 打开终端键入： 1curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.7/install.sh bash 配置环境变量(已有 .bash_profile) 12export NVM_DIR=&quot;$HOME/.nvm&quot;[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm 配置环境变量(无 .bash_profile) 添加 .bash_profile在终端键入 touch ~/.bash_profile 打开 .bash_profile在终端键入 open -e .bash_profile 在 .basn_profile中输入 export NVM_DIR=”$HOME/.nvm” 与 [ -s “$NVM_DIR/nvm.sh” ] &amp;&amp; . “$NVM_DIR/nvm.sh” # This loads nvm 两行代码 运行配置文件,在终端键入 1source ~/.bash_profile 查看配置路径,在终端键入 1$PATH]]></content>
