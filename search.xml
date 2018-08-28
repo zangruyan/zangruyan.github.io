@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[border画三角形]]></title>
-    <url>%2F2018%2F08%2F28%2Fcss-border%2F</url>
-    <content type="text"><![CDATA[border画三角形要想得到一个三角形，可以把其它三边的颜色设置为背景色。如：只要向下的三角形，保留上边框的颜色，把其它的三边设置为背景色。只要向右的三角形，保留左边框的颜色，把其它的三边设置为背景色。 进一步改进：#fff只适用背景也是白色的情况。 这种情况就不行了。所以，我们写成透明色：transparent。边框的粗细决定三角形的大小 。]]></content>
+    <title><![CDATA[html5多媒体-视频]]></title>
+    <url>%2F2018%2F08%2F28%2Fhtml5-vedio%2F</url>
+    <content type="text"><![CDATA[视频可以认为图像的升级版1语法格式：&lt;video&gt;&lt;/video&gt; 视频的标签属性 src:用于指明视频的资源地址 width:定视频的宽度 height:设定视频的高度。通常宽高控制之一即可 controls:显示控制面板。默认，控制面板不显示 poster=”:海报图片的资源地址”用于设定海报 loop:允许视频循环播放 preload:让视频预加载。 autoplay:让视频自动播放.(当设置了autoplay之后，preload会自动的失效). 视频支持的格式由于版权的缘故，没有一种视频格式是所有浏览器都支持的。如果一个视频内容想让所有的浏览器都支持，那么至少需要两种格式。HTML5将src属性拓展成了一个标签source，source需要嵌套在video标签中，一个video标签中可以嵌套多个source标签，将src属性写在soure标签上。浏览器从上往下依次判断第一个支持的视频格式，作为要播放的视频。 视频控制 视频的属性： .paused: 用于判断视频是否是暂停的，如果视频是暂停的，那么.paused为true；如果视频为播放的，那么.paused为false。只可以读取，不可以设置。 .currentTime:得到当前视频播放的秒数。既可以获取，又可以设置 .duration:得到视频的总长(秒数) .playbackRate:视频的当前速率。1表示正常速率。既可以获取，又可以设置 .muted:读取/设置视频是否处于静音状态。既可以获取，又可以设置 .volume:表示当前音量，1表示最大音量，0表示最小音量。既可以获取，又可以设置 视频的方法： .play(): 播放视频 .pause(): 暂停视频 视频的事件： ended:当视频结束的时候触发]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>html5</category>
+      </categories>
+      <tags>
+        <tag>vedio</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[margin常见问题]]></title>
+    <url>%2F2018%2F08%2F28%2Fcss-margin%2F</url>
+    <content type="text"><![CDATA[块状元素在垂直方向上有重叠现象 父元素和第一个子元素的margin-top出现重叠。如下:原因是：此时div的margin-top是自动的，由于这种情况下，它们会现margin-top重叠的情况，所以父元素与子元素之间，取margin-top大的那个值为准。如下，也会以50px为准。解决方案：给父元素加border给父元素加padding 兄弟之间在垂直方向margin重合：一样，取相邻的margin值大的那个。由于这里margin是相等，所以表现出来就是完全重合的。]]></content>
       <categories>
         <category>web前端</category>
         <category>css</category>
@@ -13,9 +25,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[margin常见问题]]></title>
-    <url>%2F2018%2F08%2F28%2Fcss-margin%2F</url>
-    <content type="text"><![CDATA[块状元素在垂直方向上有重叠现象 父元素和第一个子元素的margin-top出现重叠。如下:原因是：此时div的margin-top是自动的，由于这种情况下，它们会现margin-top重叠的情况，所以父元素与子元素之间，取margin-top大的那个值为准。如下，也会以50px为准。解决方案：给父元素加border给父元素加padding 兄弟之间在垂直方向margin重合：一样，取相邻的margin值大的那个。由于这里margin是相等，所以表现出来就是完全重合的。]]></content>
+    <title><![CDATA[border画三角形]]></title>
+    <url>%2F2018%2F08%2F28%2Fcss-border%2F</url>
+    <content type="text"><![CDATA[border画三角形要想得到一个三角形，可以把其它三边的颜色设置为背景色。如：只要向下的三角形，保留上边框的颜色，把其它的三边设置为背景色。只要向右的三角形，保留左边框的颜色，把其它的三边设置为背景色。 进一步改进：#fff只适用背景也是白色的情况。 这种情况就不行了。所以，我们写成透明色：transparent。边框的粗细决定三角形的大小 。]]></content>
       <categories>
         <category>web前端</category>
         <category>css</category>
