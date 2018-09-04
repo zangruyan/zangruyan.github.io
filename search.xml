@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[让IE678部分支持CSS3]]></title>
+    <url>%2F2018%2F09%2F04%2Fcss3-PIE-IE678%2F</url>
+    <content type="text"><![CDATA[尽管现在IE678已经被大多数公司摒弃，但是技术层面，还是想要提上一提的 我们可以通过一个第三方的插件，让IE678支持部分的CSS3.第一步：引入PIE_IE678.js文件；第二步：在使用CSS3的元素选择器中添加 behavior:url(js/PIE.htc);]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>css3</category>
+      </categories>
+      <tags>
+        <tag>css3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[html5将地理位置在地图上呈现]]></title>
+    <url>%2F2018%2F08%2F30%2Fhtml5-navigator%2F</url>
+    <content type="text"><![CDATA[一定要连网 第一步：需要有一个呈现地图的html容器. 知了背调第二步：引入百度地图的API。12&lt;!-- 先引入百度javascript版 API --&gt;&lt;script src=&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=0A5bc3c4fb543c8f9bc54b77bc155724&quot;&gt;&lt;/script&gt; 第三步：将用户的经纬度在百度地图上呈现]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>html5</category>
+      </categories>
+      <tags>
+        <tag>navigator</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[html5-多媒体-音频audio]]></title>
     <url>%2F2018%2F08%2F28%2Fhtml5-audio%2F</url>
     <content type="text"><![CDATA[音频 音频可以认为是视频的阉割版12语法格式：&lt;audio src=”音频的资源地址”&gt;&lt;/audio&gt; 音频的标签属性 src:用于指定音频的资源地址 controls:显示控制面板 loop:允许音频循环播放 preload:让音频预加载 autoplay:允许音频自动播放由于版权的缘故，没有一种格式是所有浏览器都支持的。如果一个音频内容想让所有的浏览器都支持，那么就至少需要两种格式。H5中将src属性进行了拓展成了一个标签source标签，source标签需要嵌套在audio标签中，一个audio标签中可以嵌套多个source标签，然后将src属性写在source标签上。浏览器会从上往下依次判断，找第一个支持的音频格式，作为要播放的音频。 video和audio是从IE9开始支持的。]]></content>
