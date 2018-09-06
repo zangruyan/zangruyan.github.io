@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[css3-变形transform]]></title>
+    <url>%2F2018%2F09%2F05%2Fcss3-transform%2F</url>
+    <content type="text"><![CDATA[变形transform二维变形旋转变形 transform:rotate(deg):deg表示度数，旋转函数，取值度数。如果参数写正值，表示顺时针旋转，或者说，由x轴正向向y轴正向旋转。如果写负值，表示逆时针，或说，由x轴正向向y轴负向旋转。 transform:rotateX(deg) transform:rotateY(deg) transform:rotate(deg,deg) ps:baceface-visibility:hidden; 背面不可见属性 斜切变形transform:skew(deg1,deg2):deg1:y轴正向向x轴正向靠拢的角度,deg2:x轴正向向y轴正向靠拢的角度 transform:skewX(deg); transform:skewY(deg);缩放变形transform: scale(x轴缩放的比例, y轴缩放的比例):参数不可以写百分比。如果参数只写一个值，表示x轴和y轴都按照该比例缩放。 transform:scaleX(); transform:scaleY();位移变形transform: translate(沿x轴正向平移的距离, 沿y轴正向平移的距离):距离的单位:px|%如果单位写%，那么第一个参数是相对于自身的宽度的百分比，第二个参数为相对于自身高度的百分。 transform:translateX(100px); transform:translateY(100px);变形中心点控制transform-origin: 变型中心点的横坐标 变型中心点的纵坐标:变型中心点的坐标的取值：方位名词 | px | % 元素的默认变型中心点为元素的正中心。我们可以通过属性transform-origin来设置元素的变型中心点.transform-origin需要给元素的默认样式加transform-origin的默认值：center center 拓展matrix(a,b,c,d,e,f)：矩阵函数 缩放、位移、倾斜都可以通过矩阵函数实现。 三维变形 三维变型，需要加景深，又叫透视，表示人眼距离舞台的距离。这样，就会产生近大远小、近实远虚的透视效果。 persepctive: px; //人眼距离舞台的距离 PS：景深需要给演员所在的舞台加，不要给演员加。 旋转变型 transform:rotate(deg) 默认是绕垂直于屏幕的Z轴进行旋转的。 transform:rotateX(deg) 绕X轴进行旋转 eg:体操单杠运动 transform:rotatey(deg) 绕Y轴进行旋转 eg:钢管舞 transform:rotateZ(deg) 绕Z轴进行旋转 eg:飞刀 位移变形 transform: translate(x轴正向的位移, y轴正向的位移) 2D的位移 transform: translate3D(x轴正向的位移, y轴正向的位移, Z轴正向的位移 ) 3D位移 transform: translateX(x轴正向的位移) 沿X轴正向的位移 transform: translateY(y轴正向的位移) 沿y轴正向的位移 transform: translateZ(z轴正向的位移) 沿Z轴正向的位移。正值往前移动，负值往后移动 构建立方体所需要的属性 transform-style: flat | preserve-3d; flat; //莫认值，表示将该元素的子元素以2D平面的形式展示 flat 扁的，公寓 preserve-3d; //将该元素的子元素以3D立体的形式展现 PS:transform-style需要给立方体加，不要给它的单个面加。建立3D空间，设置在父元素中，并且高于任何嵌套的变形元素，不能设置overflow:hidden; 景深 persepctive: px; //人眼距离舞台的距离。用户和元素3D空间Z平面间的距离，值小离得就近，看着就越大，值大就离得远，看着就越小。 透视点控制（景深基点） perspective-origin: 透视点的横坐标/透视点的纵坐标;透视点表示人眼看的位置。 透视点的坐标的单位： px | % | 方位名词 perspective-origin的默认值: center center; ps:透视点需要加舞台加，不要给立方体加。单位如果写px或%，表示距离左上角的距离。]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>css3</category>
+      </categories>
+      <tags>
+        <tag>css3</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[让IE678部分支持CSS3]]></title>
     <url>%2F2018%2F09%2F04%2Fcss3-PIE-IE678%2F</url>
     <content type="text"><![CDATA[尽管现在IE678已经被大多数公司摒弃，但是技术层面，还是想要提上一提的 我们可以通过一个第三方的插件，让IE678支持部分的CSS3.第一步：引入PIE_IE678.js文件；第二步：在使用CSS3的元素选择器中添加 behavior:url(js/PIE.htc);]]></content>
