@@ -132,7 +132,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/09/05/css3-transform/3.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/09/05/css3-transform/4.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/09/05/css3-transform/5.jpg">
-<meta property="og:updated_time" content="2018-09-06T08:19:35.000Z">
+<meta property="og:updated_time" content="2018-09-06T08:28:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css3-变形transform">
 <meta name="twitter:description" content="变形transform二维变形旋转变形 transform:rotate(deg):deg表示度数，旋转函数，取值度数。如果参数写正值，表示顺时针旋转，或者说，由x轴正向向y轴正向旋转。如果写负值，表示逆时针，或说，由x轴正向向y轴负向旋转。">
@@ -388,7 +388,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-06T16:19:35+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-06T16:28:31+08:00">
                 2018-09-06
               </time>
             
@@ -531,10 +531,10 @@
 </li>
 <li><p>虽然每个图片的方位不同，都旋转了一定的程度，但是现在图片都挤在一起，所以就要用到transform:translateZ()拉开空间，当translateZ为正值的时候，元素会向其面对的方向走去；如果元素无旋转，就会朝显示器走来！！</p>
 </li>
-<li>往前走多少的话要根据一个数学公式去算的，反正我是数学忘光光了，直接浏览器跑的js算出来的<br>拿本demo距离，每张美女图片的宽度是231像素，因此，有如下理想方位效果图：<br><img src="/2018/09/05/css3-transform/5.jpg" alt=""><br>图中红色标注的r就是的demo页面中图片要translateZ的理想值（该值可以让所有图片无缝围成一个圆）！<br>据说r的计算很简单，有初中数学水平的人应该都会，bug，我早就还给老师了<br>r = 106 / Math.tan(30 / 180 * Math.PI) ≈ 183.597<br>为了好看图片之间留了点间距，使用的translateZ的值为183 + 20 = 203.</li>
+<li>往前走多少的话要根据一个数学公式去算的，反正我是数学忘光光了，直接浏览器跑的js算出来的<br>拿本demo距离，每张美女图片的宽度是231像素，因此，有如下理想方位效果图：<br><img src="/2018/09/05/css3-transform/5.jpg" alt=""><br>图中红色标注的r就是的demo页面中图片要translateZ的理想值（该值可以让所有图片无缝围成一个圆）！<br>据说r的计算很简单，有初中数学水平的人应该都会，bug，我早就还给老师了<br>r = 115.5 / Math.tan(30 / 180 * Math.PI) ≈ 200<br>为了好看图片之间留了点间距，使用的translateZ的值为200 + 20 = 220.</li>
 <li>最后的最后，要让木马旋转起来，只要让容器每次旋转60度就可以了,js代码在下面贴出</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;title&gt;&lt;/title&gt;</div><div class="line">	&lt;style&gt;</div><div class="line">	html,body,div,img&#123;margin:0;padding:0;&#125;</div><div class="line">	.banner&#123;perspective: 800px;&#125; /*景深*/</div><div class="line">	.box&#123;transform-style:preserve-3d;width: 231px;margin:0 auto;height: 100px;transition:all 1s;&#125;/*设置动画，建立为3D空间*/</div><div class="line">	.box img&#123;position:absolute;&#125;</div><div class="line">	.box img:nth-child(1) &#123; transform: rotateY(   0deg ) translateZ(203px); &#125;</div><div class="line">	.box img:nth-child(2) &#123; transform: rotateY(  60deg ) translateZ(203px); &#125;</div><div class="line">	.box img:nth-child(3) &#123; transform: rotateY(  120deg) translateZ(203px); &#125;</div><div class="line">	.box img:nth-child(4) &#123; transform: rotateY( 180deg ) translateZ(203px); &#125;</div><div class="line">	.box img:nth-child(5) &#123; transform: rotateY( 240deg ) translateZ(203px); &#125;</div><div class="line">	.box img:nth-child(6) &#123; transform: rotateY( 300deg ) translateZ(203px); &#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div class=&quot;banner&quot;&gt;</div><div class="line">	&lt;div class=&quot;box&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_1.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_2.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_3.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_4.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_5.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_6.jpg&quot;&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">	var _box = document.getElementsByClassName(&apos;box&apos;)[0];</div><div class="line">	var n = 0;</div><div class="line">	_box.onclick = function()&#123;</div><div class="line">		console.log(&apos;1212&apos;);</div><div class="line">		n++;</div><div class="line">		this.style.transform = &apos;rotateY(&apos;+60*n+&apos;deg)&apos;;</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;title&gt;&lt;/title&gt;</div><div class="line">	&lt;style&gt;</div><div class="line">	html,body,div,img&#123;margin:0;padding:0;&#125;</div><div class="line">	.banner&#123;perspective: 800px;&#125; /*景深*/</div><div class="line">	.box&#123;transform-style:preserve-3d;width: 231px;margin:0 auto;height: 100px;transition:all 1s;&#125;/*设置动画，建立为3D空间*/</div><div class="line">	.box img&#123;position:absolute;&#125;</div><div class="line">	.box img:nth-child(1) &#123; transform: rotateY(   0deg ) translateZ(220px); &#125;</div><div class="line">	.box img:nth-child(2) &#123; transform: rotateY(  60deg ) translateZ(220px); &#125;</div><div class="line">	.box img:nth-child(3) &#123; transform: rotateY(  120deg) translateZ(220px); &#125;</div><div class="line">	.box img:nth-child(4) &#123; transform: rotateY( 180deg ) translateZ(220px); &#125;</div><div class="line">	.box img:nth-child(5) &#123; transform: rotateY( 240deg ) translateZ(220px); &#125;</div><div class="line">	.box img:nth-child(6) &#123; transform: rotateY( 300deg ) translateZ(220px); &#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div class=&quot;banner&quot;&gt;</div><div class="line">	&lt;div class=&quot;box&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_1.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_2.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_3.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_4.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_5.jpg&quot;&gt;</div><div class="line">		&lt;img src=&quot;images/about_6.jpg&quot;&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">	var _box = document.getElementsByClassName(&apos;box&apos;)[0];</div><div class="line">	var n = 0;</div><div class="line">	_box.onclick = function()&#123;</div><div class="line">		console.log(&apos;1212&apos;);</div><div class="line">		n++;</div><div class="line">		this.style.transform = &apos;rotateY(&apos;+60*n+&apos;deg)&apos;;</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -645,6 +645,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/09/06/css-animation/" rel="prev" title="css-animation">
+                css-animation <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -718,7 +722,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">31</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
