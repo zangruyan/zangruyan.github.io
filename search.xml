@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vue-study01]]></title>
+    <url>%2F2019%2F06%2F27%2Fvue-study01%2F</url>
+    <content type="text"><![CDATA[组件化常用技术 组件传值、通信 父组件-&gt;子组件的通信 第一步，在父组件中使用子组件时，可以给子组件绑定一个动态属性。 第二步，在子组件中，设置props属性，然后就可以直接使用了。]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[css-animation]]></title>
     <url>%2F2018%2F09%2F06%2Fcss-animation%2F</url>
     <content type="text"><![CDATA[css3动画解说 css3动画，不需要任何的触发，可以直接用css3就实现酷炫吊炸天的动画效果。类似于flash，只需要知名两个状态，之间的过程由计算机自动计算. 语法 animation: 动画名字 动画时长 缓动曲线 延迟时间 是否停留在终点（forwards） 动画执行的次数（具体的次数| infinite） 是否交替运动(alternate); animation-name:动画名字; animation-duration: 动画时长; animation-timing-function: 缓动曲线; 默认为ease animation-delay: 延迟时间; 默认为0s animation-fill-mode: normal | forwards; 是否停留在终点。 默认为normal：回到起点； forwards表示停留在终点。 animation-iteration-count: 次数 | infinite ; 默认为1次 animation-direction: normal | alternate; 是否交替运动， 默认为normal alternate表示交替运动。 animation-play-state: running | paused; 设置动画是否处于播放或暂停状态。 默认值为running(播放的) paused表示暂停。 英文注解： alternate是alter的形容词，表示：可改变的，可替换的 infinity ∞ infinite 是infinity的形容词，表示：无数次的 animal 动物 animate vt.使…动，使…有生气 animation 是animate的名词，表示动画。 书写的步骤第一步：用关键帧（@keyframes）定义自定义动画 1234567891011121314151617181920212223/*定义自定义动画*/@keyframes 动画名字&#123; from&#123; /*初始状态的CSS*/ left:10px; &#125; to&#123; /*结束状态的CSS*/ left:100px; &#125; &#125; @keyframes 动画名字&#123; 0%&#123; left:10px; &#125; 50%&#123; left:50px; &#125; 100%&#123; left:100px; &#125; &#125; 1).可以只有to. 2).可以用0%替换了from，表示起始状态，用100%替换to，表示结束状态。 3).0%到100%之间可以加无数个百分比，表示当动画运行到当前时间时所处的状态。 第二步：调用自定义动画。 在使用该动画的CSS选择器中，使用属性animation来调用该动画。animation: 动画名字 动画时长; 12/*调用自定义动画*/animation:move 1s /*动画名字 动画时长*/ animate 和js 结合 通过class 在css里加入animation的各种属性 直接给元素加-webkit-animation-xxx样式 animation的问题 写起来麻烦 没法动态改变目标点距离 obj.addEventListener(‘webkitAnimationEnd’,function(){},false);]]></content>
@@ -190,9 +202,9 @@
         <category>javascript</category>
       </categories>
       <tags>
+        <tag>for</tag>
         <tag>元素获取</tag>
         <tag>if</tag>
-        <tag>for</tag>
       </tags>
   </entry>
   <entry>
@@ -217,8 +229,8 @@
       </categories>
       <tags>
         <tag>函数</tag>
-        <tag>for</tag>
         <tag>运算符</tag>
+        <tag>for</tag>
       </tags>
   </entry>
   <entry>
